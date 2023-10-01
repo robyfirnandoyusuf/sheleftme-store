@@ -39,7 +39,7 @@
             <div class="row justify-content-center ">
                 <div class="col-md-8">
                     <div class="section_title_main_6">
-                        <h2>Awesome Services</h2>
+                        <h2>Awesome Features</h2>
                         <p>Sheleft.me menyediakan beragam layanan untuk memenuhi berbagai kebutuhan Anda. Kami dapat diandalkan dalam menghadirkan solusi yang efektif dan berkualitas tinggi, siap membantu Anda.</p>
                     </div>
                 </div>
