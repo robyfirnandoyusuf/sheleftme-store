@@ -6,9 +6,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sheleft.me Store - Solusi Produk Digitalmu">
+    <meta name="keywords" content="Produk digital, youtube premium, netflix premium, hosting murah bulanan, hosting murah tahunan, vps murah bulanan, vps murah tahunan">
+    <meta name="author" content="Aaron Wang">
+    <meta property="og:url"                content="https://store.sheleft.me" />
+    <meta property="og:type"               content="e-commerce" />
+    <meta property="og:title"              content="Sheleft.me Store" />
+    <meta property="og:description"        content="Sheleft.me Store - Solusi Produk Digitalmu" />
+    <meta property="og:image"              content="/assets/img/sheleftme2.png" />
     <title>@yield('title')</title>
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="shortcut icon">
+    <link href="/assets/img/sheleftme-favicon.png" rel="shortcut icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
     <!-- themify icon -->
