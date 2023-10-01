@@ -51,7 +51,7 @@
             <div class="col-md-12 col-lg-6 d-flex  justify-content-center align-items-center">
                 <div class="right_side">
                     <h2>Something About Us</h2>
-                    <p>owner + developernya tampan dan rupawan tpi ga ber-uang, makanya nyoba jualan H3h3</p>
+                    <p>Ownernya tampan dan rupawan minus ga ber-uang, makanya nyoba jualan H3h3</p>
                     <!-- <a href="about_us.html" class="boxed_btn"><span>Learn more</span></a> -->
                 </div>
             </div>
