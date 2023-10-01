@@ -1,0 +1,184 @@
+// offcanvas menu
+.offcanvas_menu {
+    position: fixed; 
+    z-index: 2001;
+    background: #fff;
+    width: 25%;
+    height: 100vh;
+    text-align: center;
+    overflow-y: scroll;
+    padding: 20px 30px;
+    right: -100%; 
+    color: $dark;
+    @include transition(all,.3s, ease-in-out);
+    .logo{ margin-bottom: 50px; }
+    p{ line-height: 1.5; margin: 30px 0; color: $dark; }
+    h5{ margin-bottom: 30px; color: $dark; }
+	.social_link{ 
+		margin-bottom: 50px;
+		li{ margin-right: 10px; display: inline-block;
+			a{ font-size: 0; }
+			i {
+			    font-size: 14px;
+			    display: inline-block;
+			    padding: 10px;
+			    border-radius: 50%;
+			    background: $dark;
+			    // border: 1px solid $dark;
+			    @include transition(all,.3s,ease-in-out);
+			    color: #fff
+			}
+			i.ti-facebook{ 	
+				&:hover{
+			    	background: $facebook;
+			    	color: #fff;
+			    }
+			}
+			i.ti-vimeo-alt{  	
+				&:hover{
+			    	background: $vimeo;
+			    	color: #fff;
+			    }
+			}
+			i.ti-twitter-alt{ 
+				&:hover{
+			    	background: $twitter;
+			    	color: #fff;
+			    } 
+			}
+			i.ti-pinterest{ 	
+				&:hover{
+			    	background: $pinterest;
+			    	color: #fff;
+			    } 
+			}
+		}
+	}
+    .contact_form{
+		color: $text; 
+		input[type="text"], input[type="email"], input[type="tel"], textarea, .form-control{
+			background: #fff;
+			padding: 10px;
+			@include firasans(300);
+			height: 40px;
+			font-size: 16px;
+			border-radius: 0;
+			border: 1px solid #ededed;
+			color: $text;
+			&:focus{  @include boxshadow( 0px, 0px, 38px, 2px, rgba(0, 0, 0, 0.10), false); }
+		}
+		select.form-control{ padding: 0 !important; }
+
+		textarea{ height: auto !important; }
+		.boxed_btn{ 
+		    border-radius: 0px;
+		    padding: 10px 20px;
+		    background: #007bff;
+		    display: block;
+		    margin-top: 0px;
+		    color: #fff;
+		    font-size: 13px;
+		    width: 100%;
+		    line-height: 2;
+		    text-transform: uppercase;
+		    outline: none;
+		    border: none;
+		    cursor: pointer;
+		    @include transition(all, .3s, ease-in-out);
+		    &:hover{ background: $green; }
+		}
+	}
+	.mobileno{ margin: 30px auto; }
+}
+
+// offcanvas_overlay
+.offcanvas_overlay{
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 2000;
+	opacity: 0;
+	@include transition(all, 0.3s, ease-in-out);
+	display: none;
+	background: rgba(0,0,0,0.9);
+}
+// offcanvas_overlay_2
+.offcanvas_overlay_2{
+	@extend .offcanvas_overlay;
+	position: absolute;
+}
+// Search bar
+.search_bar{ 
+	position: absolute;
+	z-index: 2002;
+	left: 50%;
+	top: 50vh;
+	transform: translate(-50%, -50%);
+	display: none;
+	opacity: 0;
+	@include transition(all, 0.3s, ease-in-out);
+	.search_body {
+	    height: 40px;
+	    overflow: hidden;
+	    border-radius: 5px;
+	    position: relative;
+	    width: 480px;
+	    background: #fff;
+	    input{
+		border-radius: 25px;
+	    display: inline-block;
+	    position: absolute;
+	    left: 0;
+	    border: none;
+	    width: 88%;
+	    height: 100%;
+	    padding-left: 25px;
+		}
+		button {
+		    background: $brand_2;
+		    @include transition(all, 0.3s, ease-in-out);
+		    border: none;
+		    cursor: pointer;
+		    color: #fff;
+		    padding: 11px 20px 11px 15px;
+		    display: inline-block;
+		    position: absolute;
+		    width: 12%;
+		    height: 100%;
+		    right: 0;
+		    &:hover{ 
+		        background: darken($brand_2, 20%);
+		    }
+		}
+	}
+}
+
+// Search bar 2
+.search_bar_2{ 
+	@extend .search_bar;
+	.search_body {
+	    border-radius: 25px;
+	    input{
+		}
+		button {
+		    background: $brand_3;
+		    &:hover{ 
+		        background: darken($brand_3, 20%);
+		    }
+		}
+	}
+}
+
+
+// For Mobile 
+@media #{$small_mobile}{
+	.search_bar{ 
+		.search_body {
+		    width: 75vw;
+		    input{ width: 80%; }
+			button { width: 20%; }
+		}
+	}
+}

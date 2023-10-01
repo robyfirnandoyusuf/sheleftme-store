@@ -1,0 +1,257 @@
+// Faq 1
+.faq_area {
+  @extend .section_padding_2;
+  background: #fafafa;
+  &.faq_bg {
+    background: #fff;
+  }
+  .faq_title {
+    margin-bottom: 80px;
+    h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: $text;
+    }
+  }
+}
+.accordion_wrapper_2 {
+  margin-bottom: 50px;
+  width: 100%;
+  h3 {
+    font-size: 32px;
+  }
+  .accordion {
+    margin: 30px 10px 0;
+    .card {
+      margin-bottom: 15px;
+      border-radius: 6px !important;
+      outline: none;
+      border: none;
+      &.shadow {
+        box-shadow: 0 5px 19px 0 grey;
+      }
+      .card-header {
+        padding: 0;
+        border-radius: 10px !important;
+        border: none;
+        outline: none;
+        background: none;
+        @include transition(all, 0.3s, ease-in-out);
+        &:hover {
+          background: #fafafa;
+          box-shadow: 0 3px 3px 0 #838bab30;
+        }
+        .btn.btn-link {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: left;
+          color: #000;
+          @include firasans(500);
+          background: #fafafa;
+          border-radius: 5px 5px 0 0;
+          text-align: left;
+          text-decoration: none;
+          cursor: pointer;
+          border: none;
+          line-height: 1;
+          padding: 15px 30px 15px 15px;
+          white-space: normal;
+
+          &.collapsed {
+            border-radius: 5px;
+            box-shadow: none;
+            background: none;
+            &:after {
+              content: "\e64b";
+            }
+          }
+
+          &:after {
+            position: absolute;
+            @include transition(all, 0.3s, ease-in-out);
+            left: auto;
+            right: 10px;
+            content: "\e648";
+            top: calc(50% - 10px);
+            font-family: "themify";
+            font-size: 16px;
+            font-weight: 700;
+          }
+        }
+      }
+      .card-body {
+        color: $dark;
+        background: #fafafa;
+        border-top: 1px solid #e9e9e9;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.8;
+        @include firasans(400);
+      }
+    }
+  }
+}
+
+.accordion_wrapper_3 {
+  .accordion {
+    .card {
+      margin-bottom: 10px;
+      border-radius: 25px !important;
+      outline: none;
+      border: none;
+      .card-header {
+        padding: 0;
+        border-radius: 10px !important;
+        border: none;
+        outline: none;
+        .btn.btn-link {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: left;
+          color: #fff;
+          background: #588898;
+          border-radius: 20px 20px 0 0;
+          text-align: left;
+          text-decoration: none;
+          cursor: pointer;
+          @include transition(all, 0.3s, ease-in-out);
+          border: none;
+          line-height: 1;
+          padding: 15px 30px 15px 15px;
+          white-space: normal;
+          &.collapsed {
+            border-radius: 20px;
+            &:after {
+              content: "\e61a";
+            }
+          }
+
+          &:after {
+            position: absolute;
+            @include transition(all, 0.3s, ease-in-out);
+            left: auto;
+            right: 10px;
+            content: "\e622";
+            top: calc(50% - 10px);
+            font-family: "themify";
+            font-size: 16px;
+            font-weight: 700;
+          }
+        }
+      }
+      .card-body {
+        color: $dark_4;
+        background: $brand_9;
+        border-radius: 0 0 25px 25px;
+        padding: 10px 15px 20px;
+        font-size: 16px;
+        line-height: 1.8;
+        @include firasans(400);
+      }
+    }
+  }
+}
+
+// Faq 2
+.faq_area_2 {
+  position: relative;
+  z-index: 1;
+  &:after {
+    position: absolute;
+    z-index: -1;
+    right: 5%;
+    bottom: 12%;
+    width: 100%;
+    content: "";
+    background: url("../img/faq-image-2.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: right bottom;
+  }
+}
+
+// Responsive
+@media #{$medium_device} {
+}
+@media #{$tab_device} {
+  .accordion_wrapper_2 {
+    margin-bottom: 45px;
+  }
+}
+@media #{$small_mobile} {
+  .faq_area {
+    .faq_title {
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .accordion_wrapper_2 {
+    margin-bottom: 35px;
+    h3 {
+      font-size: 28px;
+    }
+    .accordion {
+      .card {
+        margin-bottom: 5px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        .card-header {
+          button.btn.btn-link {
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 10px 25px 10px 10px;
+
+            &:after {
+              right: 8px;
+              top: calc(50% - 14px);
+            }
+          }
+        }
+        .card-body {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  .accordion_wrapper_3 {
+    .accordion {
+      .card {
+        margin-bottom: 5px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        .card-header {
+          button.btn.btn-link {
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 10px 25px 10px 10px;
+
+            &:after {
+              right: 8px;
+              top: calc(50% - 14px);
+            }
+          }
+        }
+        .card-body {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+@media #{$large_mobile} {
+}

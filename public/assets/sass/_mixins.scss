@@ -1,0 +1,298 @@
+// font
+@mixin rubik($weight) {
+    font-weight: $weight;
+    font-family: 'Rubik', sans-serif;
+}
+
+@mixin firasans($weight) {
+    font-weight: $weight;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+// trasnform: rotate()
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+    -ms-transform: rotate($deg);
+    /* IE 9 */
+    transform: rotate($deg);
+    /* IE 10, Fx 16+, Op 12.1+ */
+}
+
+// dropdown-arrow hide
+@mixin appearence {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@mixin transition($where: all, $time: 0.2s, $ani: ease-in-out) {
+    -webkit-transition: $where $time $ani;
+    -moz-transition: $where $time $ani;
+    -ms-transition: $where $time $ani;
+    -o-transition: $where $time $ani;
+    transition: $where $time $ani;
+}
+
+@mixin bg_property() {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// Box-shadow
+@mixin boxshadow($top, $left, $blur, $size, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $size $color;
+        -moz-box-shadow: inset $top $left $blur $size $color;
+        box-shadow: inset $top $left $blur $size $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $size $color;
+        -moz-box-shadow: $top $left $blur $size $color;
+        box-shadow: $top $left $blur $size $color;
+    }
+}
+
+@mixin gradient_bg($direction) {
+    @if $direction==left {
+        background: -webkit-linear-gradient( right, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient($direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(to $direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to $direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+    }
+    @else if $direction==right {
+        background: -webkit-linear-gradient( left, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        background: -o-linear-gradient($direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        background: linear-gradient(to $direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+    }
+    @else if $direction==top {
+        background: -webkit-linear-gradient( bottom, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        background: -o-linear-gradient($direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        background: linear-gradient(to $direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+    }
+    @else {
+        background: -webkit-linear-gradient( top, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        background: -o-linear-gradient($direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+        background: linear-gradient(to $direction, rgb(10, 207, 254) 0%, rgb(24, 45, 238) 100%);
+    }
+}
+
+@mixin gradient_bg_2($direction) {
+    @if $direction==left {
+        background: -webkit-linear-gradient( right, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: -o-linear-gradient($direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: linear-gradient(to $direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+    }
+    @else if $direction==right {
+        background: -webkit-linear-gradient( left, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: -o-linear-gradient($direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: linear-gradient(to $direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+    }
+    @else if $direction==top {
+        background: -webkit-linear-gradient( bottom, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: -o-linear-gradient($direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: linear-gradient(to $direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+    }
+    @else {
+        background: -webkit-linear-gradient( top, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: -o-linear-gradient($direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+        background: linear-gradient(to $direction, rgb(19, 23, 209) 0%, rgb(7, 22, 78) 100%);
+    }
+}
+
+@mixin gradient_bg_3($direction) {
+    @if $direction==left {
+        background: -webkit-linear-gradient( right, #363bff 0%, #d289ff 100%);
+        background: -o-linear-gradient($direction, #363bff 0%, #d289ff 100%);
+        background: -moz-linear-gradient(to $direction, #363bff 0%, #d289ff 100%);
+        background: linear-gradient(to $direction, #363bff 0%, #d289ff 100%);
+    }
+    @else if $direction==right {
+        background: -webkit-linear-gradient( left, #363bff 0%, #d289ff 100%);
+        background: -o-linear-gradient($direction, #363bff 0%, #d289ff 100%);
+        background: -moz-linear-gradient(to $direction, #363bff 0%, #d289ff 100%);
+        background: linear-gradient(to $direction, #363bff 0%, #d289ff 100%);
+    }
+    @else if $direction==top {
+        background: -webkit-linear-gradient( bottom, #363bff 0%, #d289ff 100%);
+        background: -o-linear-gradient($direction, #363bff 0%, #d289ff 100%);
+        background: -moz-linear-gradient(to $direction, #363bff 0%, #d289ff 100%);
+        background: linear-gradient(to $direction, #363bff 0%, #d289ff 100%);
+    }
+    @else {
+        background: -webkit-linear-gradient( top, #363bff 0%, #d289ff 100%);
+        background: -o-linear-gradient($direction, #363bff 0%, #d289ff 100%);
+        background: -moz-linear-gradient(to $direction, #363bff 0%, #d289ff 100%);
+        background: linear-gradient(to $direction, #363bff 0%, #d289ff 100%);
+    }
+}
+
+@mixin gradient_bg_4($direction) {
+    @if $direction==left {
+        background: -webkit-linear-gradient( right, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: -o-linear-gradient($direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: linear-gradient(to $direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+    }
+    @else if $direction==right {
+        background: -webkit-linear-gradient( left, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: -o-linear-gradient($direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: linear-gradient(to $direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+    }
+    @else if $direction==top {
+        background: -webkit-linear-gradient( bottom, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: -o-linear-gradient($direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: linear-gradient(to $direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+    }
+    @else {
+        background: -webkit-linear-gradient( top, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: -o-linear-gradient($direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+        background: linear-gradient(to $direction, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+    }
+}
+
+@mixin gradient_bg_5($direction) {
+    @if $direction==left {
+        background: -webkit-linear-gradient( right, #12092b 0%, #0b1230 100%);
+        background: -o-linear-gradient($direction, #12092b 0%, #0b1230 100%);
+        background: -moz-linear-gradient(to $direction, #12092b 0%, #0b1230 100%);
+        background: linear-gradient(to $direction, #12092b 0%, #0b1230 100%);
+    }
+    @else if $direction==right {
+        background: -webkit-linear-gradient( left, #12092b 0%, #0b1230 100%);
+        background: -o-linear-gradient($direction, #12092b 0%, #0b1230 100%);
+        background: -moz-linear-gradient(to $direction, #12092b 0%, #0b1230 100%);
+        background: linear-gradient(to $direction, #12092b 0%, #0b1230 100%);
+    }
+    @else if $direction==top {
+        background: -webkit-linear-gradient( bottom, #12092b 0%, #0b1230 100%);
+        background: -o-linear-gradient($direction, #12092b 0%, #0b1230 100%);
+        background: -moz-linear-gradient(to $direction, #12092b 0%, #0b1230 100%);
+        background: linear-gradient(to $direction, #12092b 0%, #0b1230 100%);
+    }
+    @else {
+        background: -webkit-linear-gradient( top, #12092b 0%, #0b1230 100%);
+        background: -o-linear-gradient($direction, #12092b 0%, #0b1230 100%);
+        background: -moz-linear-gradient(to $direction, #12092b 0%, #0b1230 100%);
+        background: linear-gradient(to $direction, #12092b 0%, #0b1230 100%);
+    }
+}
+
+@mixin gradient_bg_6($direction) {
+    @if $direction==left {
+        background: -webkit-linear-gradient( right, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: -o-linear-gradient($direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: linear-gradient(to $direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+    }
+    @else if $direction==right {
+        background: -webkit-linear-gradient( left, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: -o-linear-gradient($direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: linear-gradient(to $direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+    }
+    @else if $direction==top {
+        background: -webkit-linear-gradient( bottom, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: -o-linear-gradient($direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: linear-gradient(to $direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+    }
+    @else {
+        background: -webkit-linear-gradient( top, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: -o-linear-gradient($direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+        background: linear-gradient(to $direction, rgb(21, 239, 164) 0%, rgb(11, 189, 255) 100%);
+    }
+}
+
+@mixin gradient_bg_7($direction) {
+    @if $direction==left {
+        background: -webkit-linear-gradient( right, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: -o-linear-gradient($direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: linear-gradient(to $direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+    }
+    @else if $direction==right {
+        background: -webkit-linear-gradient( left, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: -o-linear-gradient($direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: linear-gradient(to $direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+    }
+    @else if $direction==top {
+        background: -webkit-linear-gradient( bottom, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: -o-linear-gradient($direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: linear-gradient(to $direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+    }
+    @else {
+        background: -webkit-linear-gradient( top, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: -o-linear-gradient($direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+        background: linear-gradient(to $direction, rgb(19, 18, 140) 0%, rgb(55, 8, 99) 100%);
+    }
+}
+
+@mixin gradient_bg_8($direction) {
+    @if $direction==left {
+        background: -webkit-linear-gradient( right, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: -o-linear-gradient($direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: linear-gradient(to $direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+    }
+    @else if $direction==right {
+        background: -webkit-linear-gradient( right, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: -o-linear-gradient($direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: linear-gradient(to $direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+    }
+    @else if $direction==top {
+        background: -webkit-linear-gradient( right, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: -o-linear-gradient($direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: linear-gradient(to $direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+    }
+    @else {
+        background: -webkit-linear-gradient( right, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: -o-linear-gradient($direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: -moz-linear-gradient(to $direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+        background: linear-gradient(to $direction, rgb(184, 38, 110) 0%, rgb(235, 86, 108) 100%);
+    }
+}
+
+
+@mixin placeholdercolor($color, $coloropacity) {
+    &::placeholder {
+        opacity: $coloropacity;
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        opacity: $coloropacity;
+        color: $color;
+    }
+    &::-ms-input-placeholder {
+        opacity: $coloropacity;
+        color: $color;
+    }
+    &:-moz-placeholder {
+        opacity: $coloropacity;
+        color: $color;
+    }
+    &::-moz-placeholder {
+        opacity: $coloropacity;
+        color: $color;
+    }
+}

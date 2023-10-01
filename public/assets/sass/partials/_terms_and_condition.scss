@@ -1,0 +1,17 @@
+	// Terms and condition page
+.terms_and_con_area{
+	@extend .gray_bg;
+	.single_terms{
+		h2{
+			font-size: 24px;
+			margin: 40px 0 10px;
+			color: $brand_2;
+		}
+		p{
+			font-size: 16px;
+			color: $dark;
+			line-height: 1.5;
+		}
+	}
+}
+

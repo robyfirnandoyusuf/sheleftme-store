@@ -1,0 +1,86 @@
+	// Knowledge 
+.knowledge_area{
+	@extend .section_padding_2;
+	.card{ 
+		position: relative;
+		z-index: 1;	
+		border-radius: 5px;
+		margin-bottom: 60px;
+		overflow: hidden;
+		@include boxshadow(0px, 0px, 25px,0, rgba(0,0,0,0.1), false);
+		border: none;
+		.card-header{
+			font-size: 24px;
+			padding: 30px;
+			background: none;
+			border: none;
+		    @include firasans(700);
+			a{
+				color: #000;	
+				@include transition(all,.3s,ease-in-out);
+				i{
+					top: 2px;
+				    position: relative;
+				    left: -5px;
+				    font-weight: 700;
+				}
+				&:hover{ color: $brand_2; }
+			}	
+		}
+		.card-body {
+			padding: 0;
+			.knowledge_list{
+				margin-bottom: 30px;
+				li {
+				    padding: 10px 5px;
+				    padding-left: 30px;
+				    color: $text;
+				    &:hover{ background: $light_dark; }
+				    a{
+				    	color: $text;
+				    	font-size: 16px;
+				    	&:hover{ color: $text; }
+				    }
+					i {
+					    position: relative;
+					    color: $brand_2;
+					    left: -10px;
+					    top: 0px;
+					}
+				}
+			}
+		}
+		.card-footer{
+			font-size: 20px;
+		    @include firasans(700);
+		    border: none;
+		    text-align: center;
+		    padding: 0px;
+			a{
+				background: $brand_2;
+				color: #fff;
+				display: inline-block;
+				width: 100%;
+				padding: 25px;
+				@include transition(all,.3s,ease-in-out);
+				&:hover{ background: $green; }
+			}
+		}
+	}
+}
+
+
+
+@media #{$tab_device}{
+	.knowledge_area .card {
+		margin-bottom: 45px;
+	}
+}
+
+@media #{$small_mobile}{
+	.knowledge_area .card {
+		margin-bottom: 35px;
+		.card-footer{ font-size: 16px; }
+	}
+
+}

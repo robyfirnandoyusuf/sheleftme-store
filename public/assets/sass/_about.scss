@@ -1,0 +1,304 @@
+// About Section 1
+.about_section{
+	@extend .section_padding;
+	.single_about{
+		margin-top: 100px;
+		.about_info{
+			h3 {
+				display: inline-block;
+			    font-size: 36px;
+			    margin-bottom: 25px;
+			    @include firasans(700);
+			    @include gradient_bg_4(left);
+				-webkit-background-clip: text;
+			  	-webkit-text-fill-color: transparent;
+			}
+
+			p {
+			    font-size: 16px;
+			    line-height: 1.5;
+			    color: $text;
+			    margin-bottom: 25px;
+			}
+
+			li {
+				color: $text;
+			    font-size: 14px;
+			    margin-bottom: 15px;
+			    i {
+				    margin-right: 5px;
+				    color: $green;
+				    font-weight: 900;
+				}
+				&:last-child{
+					margin: 0;
+				}
+			}
+			a.boxed_btn {
+			    color: #fff;
+			    padding: 15px 20px;
+			    margin-top: 30px;
+			    @include gradient_bg_4(right); 
+			    display: inline-block;
+			    border-radius: 5px;
+			    cursor: pointer;
+			    @extend .gradient_btn_main;
+				@include transition(all, .3s, ease-in-out);
+				&:hover {
+					color: #fff; 
+				}
+				&:after{ background: $brand_6; border-radius: 5px; }
+			}
+		}
+		.about_img{
+			position: relative;
+			z-index: 1;
+			&:after{
+			    position: absolute;
+			    z-index: -1;
+			    content: '';
+			    margin: 0 auto;
+			    bottom: -12%;
+			    width: 100%;
+			    height: 100%;
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-image: url('../img/about/about_bg_1.png');
+			}
+		}
+	}
+}
+// About_work_area 1
+.about_work_area{
+	.about_work{
+		h2{
+			color: $dark;
+			font-size: 36px;
+			@include firasans(600);
+			margin-bottom: 35px;
+			position: relative;
+			&:after{
+				position: absolute;
+				z-index: -1;
+				left: 0;
+				bottom: -15px;
+				width: 100px;
+				height: 2px;
+				background: $green;
+				content: '';
+			}
+		}
+		p{
+			font-size: 16px;
+			@include firasans(400);
+			margin-bottom: 45px;
+			line-height: 1.5;
+			text-align: justify;
+			color: $text;
+		}
+		h3{
+			color: $dark;
+			font-size: 24px;
+			@include firasans(400);
+			margin-bottom: 25px;
+		}
+		.boxed_btn{
+			font-size: 16px;
+			@include firasans(400);
+			padding: 16px 35px;
+			display: inline-block;
+			color: #fff;
+			background: $green;
+			@include transition(all, .3s, ease-in-out);
+			border-radius: 5px;
+			&:hover{
+				background: $brand_6;
+				color: #fff;
+			}
+		}
+	}
+}
+// About Section 3
+.about_section_2{
+	.single_about{
+		.about_info{
+			.service_list{
+				margin-top: 45px;
+				li {
+					color: $dark;
+					font-weight: 600;
+				    font-size: 14px;
+				    margin-bottom: 15px;
+				    i {
+					    margin-right: 5px;
+					    color: $brand_7;
+					    font-weight: 900;
+					}
+					&:last-child{
+						margin: 0;
+					}
+				}
+			}
+			a.boxed_btn {
+			    color: #fff;
+			    padding: 15px 20px;
+			    margin-top: 30px;
+			    @include gradient_bg_6(bottom); 
+			    display: inline-table;
+			    @extend .gradient_btn_main;
+			    border-radius: 5px;
+			    cursor: pointer;
+				@include transition(all, .3s, ease-in-out);
+				&:hover {
+					color: #fff;
+				}
+				&:after {
+					background: $brand_7;
+					border-radius: 5px;
+				}
+			}
+		}
+		.about_img{
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			img{
+			}
+		}
+	}
+}
+
+
+@media #{$medium_device}{
+	.about_section{
+		margin-top: 50px;
+		.single_about{
+			margin-top: 50px;
+			.about_img{
+				img{ height: 430px; }
+				&:after{  width: 85%; }
+			}
+		}
+	}
+	.about_section_2{
+		.about_img{
+			img{ height: 430px; }
+		}
+	}
+}
+@media #{$tab_device}{
+	.about_section{
+		margin-top: 50px;
+		.single_about{
+			margin-top: 30px;
+			.about_info{
+				h3 {
+				    font-size: 28px;
+				    margin-bottom: 15px;
+				}
+				p { margin-bottom: 15px; }
+				li { margin-bottom: 10px; }
+				a.boxed_btn {
+				    margin-top: 20px;
+				    padding: 10px 15px;
+					font-size: 14px;
+				}
+			}
+			.about_img{
+				img{ height: 350px; }
+				&:after{ width: 90%; }
+			}
+		}
+	}
+	.about_work_area{
+		.about_work{
+			margin-bottom: 50px;
+		}
+	}
+	.about_section_2{
+		.single_about{
+			.about_info{
+				li { margin-bottom: 10px; }
+				a.boxed_btn {
+				    margin-top: 20px;
+				    padding: 10px 15px;
+					font-size: 14px;
+				}
+			}
+			.about_img{
+				img{ height: 350px; }
+			}
+		}
+	}
+
+}
+@media #{$small_mobile}{
+	.about_section{
+		margin-top: 50px;
+		.single_about{
+			margin-top: 30px;
+			.about_info{
+				text-align: center;
+				margin-top: 20px;
+				h3 {
+				    font-size: 24px;
+				    margin-bottom: 10px;
+				}
+				p {
+				    line-height: 1.2;
+				    margin-bottom: 10px;
+				}
+				li {  margin-bottom: 5px; }
+				a.boxed_btn {
+				    margin-top: 20px;
+				    padding: 10px 15px;
+					font-size: 14px;
+				}
+			}
+			.about_img{
+				img{ height: 300px; }
+				&:after{ width: 60%; }
+			}
+		}
+	}
+	.about_work_area{
+		.about_work{
+			margin-bottom: 35px;
+			h2{
+				margin-bottom: 25px;
+				&:after{ bottom: -10px; }
+			}
+			p{
+				font-size: 14px;
+				margin-bottom: 35px;
+			}
+			h3{ font-size: 18px; }
+			.boxed_btn{
+				font-size: 14px;
+				padding: 10px 25px;
+			}
+		}
+	}
+	.about_section_2{
+		.single_about{
+			.about_info{
+				text-align: center;
+				margin-top: 20px;
+				li { margin-bottom: 5px; }
+				a.boxed_btn {
+				    margin-top: 20px;
+				    padding: 10px 15px;
+					font-size: 14px;
+				}
+
+			}
+			.about_img{
+				img{ height: 300px; }
+			}
+		}
+	}
+}
+@media #{$large_mobile}{
+	
+}

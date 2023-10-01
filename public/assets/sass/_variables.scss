@@ -1,0 +1,55 @@
+// sass responsive
+$medium_device: "only screen and (min-width: 992px) and (max-width: 1200px)";
+$tab_device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$tab_device_below: "only screen and (min-width: 320px) and (max-width: 991px)";
+$small_mobile: "(max-width: 767px)";
+$large_mobile: "only screen and (min-width: 480px) and (max-width: 767px)";
+$mobile320To480px: "only screen and (min-width: 320px) and (max-width: 480px)";
+// Body Background
+$light_dark: #f8fafe;
+$dark_body: #f4f5f9;
+$light_blue: #eaf8fd;
+$dark_bg: #272727; // breadcrumb bg
+$light_pink: #fff8fa;
+$pink: rgb(235, 86, 108);
+// font color
+$text: #838bab;
+$dark: #304e73;
+$dark_2: #0f2037;
+$dark_3: #191b41;
+$dark_4: #28425d; //update
+
+//branding
+$light_brand: #0acffe;
+$brand: #0cbafc; //sky blue
+$brand_2: #363bff;
+$brand_3: #1b38ff;
+$brand_3_dark: #182dcc;
+$brand_4: #35dc78;
+$brand_4b: #34dbfe;
+$brand_5: #6a11cb;
+$brand_6: #3a2085;
+$brand_7: #15efa4;
+$brand_9: #d0ffff;
+
+$green: #2cd63c; //update
+$green_2: #00c212; //update
+$yellow: #ffcc02; //update
+$dark_pink: #fa183d;
+$orangee: #f9743f; //update
+
+// Social Media Color:
+$facebook: #3b5998;
+$flickr: #ff0084;
+$googleplus: #dd4b39;
+$linkedin: #00a0dc;
+$dribbble: #ea4c89;
+$medium: #00ab6c;
+$instagram: #517fa4;
+$pinterest: #bd081c;
+$periscope: #40a4c4;
+$tumblr: #35465c;
+$twitter: #1da1f2;
+$vimeo: #1ab7ea;
+$youtube: #ff0000;
+$yahoo: #410093;

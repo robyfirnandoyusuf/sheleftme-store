@@ -1,0 +1,1581 @@
+// Hosting Brand 1
+.hosting_brand {
+  .container {
+    position: relative;
+    .styled_bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      &:before {
+        position: absolute;
+        left: -210px;
+        bottom: 80px;
+        background-image: url("../img/domain/man.png");
+        width: 370px;
+        height: 65%;
+        background-position: bottom center;
+        content: "";
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &:after {
+        position: absolute;
+        right: 2px;
+        top: 0;
+        background-image: url("../img/domain/lamp.png");
+        width: 230px;
+        height: 24%;
+        background-position: bottom center;
+        content: "";
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    .section_title {
+      h2 {
+        margin-top: 90px;
+        font-size: 36px;
+        color: $dark;
+        margin-bottom: 35px;
+        @include firasans(700);
+        line-height: 47px;
+        span {
+          color: $brand;
+        }
+      }
+      p {
+        margin-bottom: 35px;
+        color: $text;
+        font-size: 16px;
+        padding: 0 50px;
+        @include firasans(400);
+        line-height: 28px;
+      }
+      .boxed_btn.boxed_blue_btn {
+        border: none;
+        padding: 15px 30px;
+        @extend .boxed_blue_btn;
+      }
+      .boxed_btn.boxed_green_btn {
+        border: none;
+        padding: 15px 30px;
+        @extend .boxed_green_btn;
+      }
+    }
+  }
+}
+
+.domain_form {
+  position: relative;
+  background: #fff;
+  text-align: center;
+  padding: 55px 0;
+  margin: 75px auto 0;
+  z-index: 89;
+  border-radius: 25px;
+  @include boxshadow(0px, 0px, 24px, 0px, rgba(3, 74, 235, 0.2), false);
+  .styled_bg_2 {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    position: absolute;
+    z-index: -1;
+    padding: 55px 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      z-index: -1;
+      background: $brand;
+      opacity: 0.2;
+    }
+    &:before {
+      left: 8%;
+      @include rotate(30deg);
+      top: -120%;
+      opacity: 0.25;
+    }
+    &:after {
+      border-radius: 10px;
+      left: -70%;
+      @include rotate(125deg);
+      top: 165%;
+    }
+  }
+}
+
+.domain_form form {
+  @include gradient_bg(left);
+  display: inline-block;
+  border-radius: 50px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 auto 45px;
+  .domain_in {
+    color: #fff;
+    @include firasans(400);
+    @include placeholdercolor($brand, 1);
+    font-size: 16px;
+    padding: 11px;
+    float: left;
+    background: none;
+    border: none;
+    outline: none;
+    width: 392px;
+    margin-right: 25px;
+    border-radius: 50px;
+    padding-left: 25px;
+  }
+  .select_wrapper {
+    position: relative;
+    z-index: 1;
+    width: 90px;
+    height: auto;
+    background: none;
+    display: inline-block;
+    float: left;
+    height: 42px;
+    border: none;
+    &:after,
+    &:before {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      content: "";
+      text-align: center;
+      background: #fff;
+      opacity: 0.4;
+    }
+    &:before {
+      left: -10px;
+    }
+    #chose_domain {
+      @include transition(all, 0.3s, ease-in-out);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: none;
+      margin: 0;
+      border: none;
+      @include firasans(400);
+      text-shadow: 0 0 0 #fff;
+      color: transparent;
+      font-size: 18px;
+      padding: 5px;
+      cursor: pointer;
+      line-height: 36px;
+    }
+    .option_list {
+      position: absolute;
+      background: #fff;
+      width: 150%;
+      overflow: hidden;
+      border-radius: 15px;
+      top: 100%;
+      display: none;
+      visibility: hidden;
+      right: 0;
+      left: auto;
+      @include transition(all, 0.3s, ease-in-out);
+      &.dropon {
+        display: block !important;
+        visibility: visible;
+        top: 130%;
+        @include boxshadow(
+          2.347px,
+          4.415px,
+          20px,
+          0px,
+          rgba(23, 6, 125, 0.3),
+          false
+        );
+      }
+      li {
+        @include transition(all, 0.3s, ease-in-out);
+        @include firasans(400);
+        color: $brand;
+        background: #fff;
+        font-size: 16px;
+        padding: 5px 15px;
+        cursor: pointer;
+        margin: 0;
+        text-align: left;
+        line-height: 30px;
+        &:hover {
+          color: #fff;
+          background: $brand;
+        }
+      }
+    }
+    .arrow {
+      position: absolute;
+      z-index: 19;
+      left: auto;
+      right: 10%;
+      top: calc(50% - 8px);
+      color: #fff;
+      cursor: pointer;
+      @include transition(all, 0.3s, ease-in-out);
+      transform: scaleY(1);
+      &.reverce {
+        transform: scaleY(-1);
+      }
+    }
+  }
+}
+
+.domain_form .search_domain_btn {
+  background: #fff;
+  border: none;
+  color: $dark;
+  border-radius: 50px;
+  text-transform: uppercase;
+  padding: 12px 42px;
+  font-size: 16px;
+  margin: 0;
+  margin-left: 25px;
+  border: 1px solid #fff;
+  float: right;
+  @include firasans(500);
+  @include transition(all, 0.3s, ease-in-out);
+  i {
+    color: $brand;
+    font-weight: 700;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+  &:hover i {
+    color: #fff;
+  }
+  &:hover {
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+}
+
+.domain_form .domain_list {
+  display: inline-block;
+  background: #fff;
+  img {
+    mix-blend-mode: multiply;
+    margin: 0 10px;
+    height: 35px;
+    cursor: pointer;
+  }
+}
+
+// Hosting Brand 2
+.hosting_brand_2 {
+  position: relative;
+  background: #f8fafe;
+  @extend .section_padding;
+  .layers {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    .layer-one {
+      animation: hoa_move1 1.8s ease-in-out infinite alternate;
+      position: absolute;
+      top: 0;
+      z-index: 5;
+      margin-left: -50px;
+    }
+    .layer-two {
+      animation: hoa_move2 2s ease-in-out infinite alternate;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      margin-left: -50px;
+    }
+    .layer-three {
+      animation: hoa_move3 2s ease-in-out infinite alternate;
+      position: absolute;
+      top: 0;
+      z-index: 5;
+      margin-right: -20px;
+    }
+    .layer-four {
+      animation: hoa_move4 1.8s ease-in-out infinite alternate;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      margin-right: -20px;
+    }
+  }
+}
+
+@-webkit-keyframes hoa_move1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 0);
+  }
+}
+
+@-webkit-keyframes hoa_move2 {
+  0% {
+    transform: translate(30px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes hoa_move3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+@-webkit-keyframes hoa_move4 {
+  0% {
+    transform: translate(2%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.domain_form_2 {
+  @extend .domain_form;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  form {
+    @include gradient_bg_2(left);
+  }
+  .option_list li {
+    color: $brand_2 !important;
+    &:hover {
+      background: $brand_2 !important;
+      color: #fff !important;
+    }
+  }
+}
+
+// Hosting Brand 3
+.hosting_brand_3 {
+  position: relative;
+  background: $brand_3;
+  @extend .section_padding;
+}
+
+.domain_form_3 {
+  @extend .domain_form;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  form {
+    background: #fff;
+    .domain_in {
+      background: #fff;
+      color: $dark;
+      @include placeholdercolor($dark, 1);
+    }
+    .select_wrapper {
+      #chose_domain {
+        text-shadow: 0 0 0 $brand_3;
+      }
+      .arrow {
+        color: $brand_3;
+      }
+      &:after,
+      &:before {
+        background: $dark;
+      }
+    }
+    .search_domain_btn {
+      background: $brand_3;
+      border: 1px solid $brand_3;
+      i,
+      span {
+        color: #fff;
+      }
+      &:hover {
+        background: darken($brand_3, 20%);
+      }
+    }
+    .option_list li {
+      color: $brand_3 !important;
+      &:hover {
+        background: $brand_3 !important;
+        color: #fff !important;
+      }
+    }
+  }
+  .domain_names {
+    li {
+      display: inline-block;
+      color: #fff;
+      font-size: 18px;
+      @include firasans(700);
+      margin: 0 18px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Hosting Brand 4
+.domain_form_4 {
+  @extend .domain_form;
+  padding: 30px 0;
+  margin-top: 165px;
+  position: relative;
+  z-index: 1;
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    @include gradient_bg_3(top);
+    z-index: -1;
+    border-radius: 25px;
+  }
+  form {
+    background: none;
+    margin-bottom: 35px;
+    .domain_in {
+      border: 1px solid #fff;
+      @include placeholdercolor(#fff, 1);
+      margin-right: 15px;
+      background: rgba(0, 0, 0, 0.1);
+      line-height: 1.5;
+      padding: 8px;
+      height: 50px;
+      padding-left: 25px;
+      width: 315px;
+    }
+    .select_wrapper {
+      width: 130px;
+      height: 50px;
+      border-radius: 50px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.1);
+      border: 1px solid #fff;
+      &:after,
+      &:before {
+        display: none;
+      }
+      #chose_domain {
+        padding-left: 25px;
+      }
+      .option_list {
+        width: 100%;
+        li {
+          color: #363bff !important;
+          background: #fff;
+          &:hover {
+            color: #fff !important;
+            background: #363bff !important;
+          }
+        }
+      }
+      .arrow {
+        right: 20%;
+      }
+    }
+  }
+  .search_domain_btn {
+    margin-left: 15px;
+    padding: 12px 32px;
+    height: 50px;
+  }
+  .domain_list {
+    border-radius: 10px;
+    padding: 10px 10px 5px;
+    background: white;
+    img {
+      margin: 0 15px;
+    }
+  }
+}
+
+// Hosting Brand 5
+.domain_form_5 {
+  @extend .domain_form;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  form {
+    background: none;
+    margin-bottom: 35px;
+    .domain_in {
+      border: none;
+      @include placeholdercolor(#000, 1);
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 10px 0 0 10px;
+      margin: 0;
+      height: 72px;
+      padding: 8px;
+      padding-left: 25px;
+      width: 445px;
+    }
+    .select_wrapper {
+      width: 95px;
+      height: 72px;
+      border-radius: 0 10px 10px 0;
+      color: #fff;
+      @include gradient_bg_4(top);
+      border: none;
+      &:before {
+        display: none;
+      }
+      &:after {
+        left: 0;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        border-radius: 0 0 10px 0px;
+        height: 22px;
+        background: rgba(0, 0, 0, 0.7);
+      }
+      #chose_domain {
+        padding: 0;
+        text-align: center;
+        height: 50px;
+        font-size: 20px;
+      }
+      .option_list {
+        width: 120%;
+      }
+      .option_list li {
+        color: $brand_5;
+        &:hover {
+          background: $brand_5;
+          color: #fff;
+        }
+      }
+      .arrow {
+        right: 0;
+        left: 0;
+        top: 70%;
+      }
+    }
+  }
+  .search_domain_btn {
+    margin-left: 20px;
+    padding: 25px 30px;
+    height: 72px;
+    color: #fff;
+    border: 0;
+    @extend .gradient_btn_main;
+    @include gradient_bg_4(top);
+    @include transition(all, 0.3s, ease-in-out);
+    border-radius: 10px;
+    i {
+      color: #fff;
+    }
+    &:hover i {
+      color: $brand_5;
+    }
+    &:hover {
+      border: 0;
+      color: $dark;
+    }
+    &:after {
+      background: #fff;
+      border-radius: 10px;
+    }
+  }
+}
+
+// Hosting Brand 6
+.domain_form_6 {
+  @extend .domain_form_5;
+  form {
+    margin-bottom: 0px;
+    .select_wrapper {
+      background: $brand_6;
+      .option_list li {
+        color: $brand_5;
+        &:hover {
+          background: $brand_5;
+          color: #fff;
+        }
+      }
+      .arrow {
+        right: 0;
+        left: 0;
+        top: 70%;
+      }
+    }
+  }
+  .search_domain_btn {
+    background: $brand_6;
+    &:hover {
+      border: 0;
+      background: #fff;
+      color: $dark;
+    }
+  }
+}
+
+// Hosting Brand 7
+.domain_form_7 {
+  @extend .domain_form_5;
+  form {
+    margin-bottom: 0px;
+    .select_wrapper {
+      background: $brand_6;
+      .option_list li {
+        color: $brand_5;
+        line-height: 1;
+        &:hover {
+          background: $brand_5;
+          color: #fff;
+        }
+      }
+      .arrow {
+        right: 0;
+        left: 0;
+        top: 70%;
+      }
+    }
+  }
+  .search_domain_btn {
+    background: $brand_6;
+    &:hover {
+      border: 0;
+      background: #fff;
+      color: $dark;
+    }
+  }
+}
+
+// Hosting Brand 8
+.domain_form_8 {
+  position: relative;
+  z-index: 89;
+  background: none;
+  box-shadow: none;
+  margin: 0 auto;
+  padding: 0;
+  form {
+    margin: 0 auto;
+    .input-group {
+      width: auto;
+      border-radius: 10px;
+      @include boxshadow(0px, 0px, 28.5px, 1.5px, rgba(0, 0, 0, 0.2), false);
+      span {
+        border: none;
+        border-radius: 10px 0 0 10px;
+      }
+    }
+    .domain_in {
+      font-size: 16px;
+      @include firasans(400);
+      @include placeholdercolor(#000, 0.7);
+      background: #fff;
+      color: #000;
+      border: none;
+      float: left;
+      outline: none;
+      border-radius: 10px 0 0 10px;
+      margin: 0;
+      height: 60px;
+      padding: 8px;
+      padding-left: 12px;
+      width: 355px;
+    }
+    .select_wrapper {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      float: left;
+      width: 95px;
+      height: 60px;
+      border-radius: 0 10px 10px 0;
+      color: #fff;
+      background: $dark_3;
+      border: none;
+      #chose_domain {
+        @include transition(all, 0.3s, ease-in-out);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: none;
+        margin: 0;
+        border: none;
+        @include firasans(400);
+        text-shadow: 0 0 0 #fff;
+        color: transparent;
+        padding: 10px;
+        cursor: pointer;
+        line-height: 36px;
+        font-size: 20px;
+      }
+      .option_list {
+        position: absolute;
+        background: #fff;
+        width: 120%;
+        overflow: hidden;
+        border-radius: 15px;
+        top: 100%;
+        display: none;
+        visibility: hidden;
+        right: 0;
+        left: auto;
+        @include transition(all, 0.3s, ease-in-out);
+        &.dropon {
+          display: block !important;
+          visibility: visible;
+          top: 130%;
+          @include boxshadow(
+            2.347px,
+            4.415px,
+            20px,
+            0px,
+            rgba(23, 6, 125, 0.3),
+            false
+          );
+        }
+        li {
+          @include transition(all, 0.3s, ease-in-out);
+          @include firasans(400);
+          color: $dark_3;
+          background: #fff;
+          font-size: 16px;
+          padding: 5px 15px;
+          cursor: pointer;
+          margin: 0;
+          text-align: left;
+          line-height: 30px;
+          &:hover {
+            background: $dark_3;
+            color: #fff;
+          }
+        }
+      }
+      .arrow {
+        position: absolute;
+        z-index: 19;
+        left: auto;
+        right: 15px;
+        top: calc(50% - 8px);
+        color: #fff;
+        cursor: pointer;
+        @include transition(all, 0.3s, ease-in-out);
+        transform: scaleY(1);
+        &.reverce {
+          transform: scaleY(-1);
+        }
+      }
+    }
+    .search_domain_btn {
+      margin-left: 20px;
+      padding: 20px 30px;
+      height: 60px;
+      @include boxshadow(0px, 0px, 28.5px, 1.5px, rgba(0, 0, 0, 0.2), false);
+      color: $dark_3;
+      background: #fff;
+      @include transition(all, 0.5s, ease-in-out);
+      border-radius: 10px;
+      border: 0;
+      i {
+        color: $dark_3;
+      }
+      &:hover i {
+        color: #fff;
+      }
+      &:hover {
+        background: $dark_3;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Hosting Brand 9
+.hosting_brand_9 {
+  position: relative;
+  background: url("../img/domain-bg-0001.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @extend .section_padding;
+  h4 {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+.domain_form_9 {
+  @extend .domain_form;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  form {
+    background: transparent;
+    margin: 0 auto 25px;
+    .domain_in {
+      background: #050234;
+      color: #fff;
+      margin-right: 0;
+      @include placeholdercolor(#fff, 1);
+      border-radius: 8px 0 0 8px;
+      border: 1px solid #1a174f;
+      padding: 20px;
+    }
+    .select_wrapper {
+      height: 61px;
+      border-radius: 0 8px 8px 0;
+      background-image: linear-gradient(
+        90deg,
+        rgb(106, 17, 203) 0%,
+        rgb(37, 117, 252) 100%
+      );
+      #chose_domain {
+        text-shadow: 0 0 0 $brand_3;
+        color: #fff;
+      }
+      .arrow {
+        color: #fff;
+      }
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+    .search_domain_btn {
+      @include gradient_bg_8(right);
+      border: none;
+      padding: 21px 40px;
+      border-radius: 8px;
+      i,
+      span {
+        color: #fff;
+      }
+      &:hover {
+        @include gradient_bg_8(left);
+        border: none;
+      }
+    }
+    .option_list li {
+      color: $brand_3 !important;
+      &:hover {
+        background: $brand_3 !important;
+        color: #fff !important;
+      }
+    }
+  }
+  .domain_names {
+    li {
+      display: inline-block;
+      color: #fff;
+      font-size: 18px;
+      @include firasans(700);
+      margin: 0 18px;
+      @include transition(all, 0.3s, ease-in-out);
+      &:hover {
+        cursor: pointer;
+        color: $pink;
+      }
+    }
+  }
+}
+
+// Hosting Brand 10
+.hosting_brand_10 {
+  .container {
+    position: relative;
+    .styled_bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      &:before {
+        position: absolute;
+        left: -170px;
+        bottom: 0px;
+        background-image: url("../img/domain/man.png");
+        width: 320px;
+        height: 90%;
+        background-position: bottom center;
+        content: "";
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &:after {
+        position: absolute;
+        right: 2px;
+        top: 0;
+        background-image: url("../img/domain/lamp.png");
+        width: 230px;
+        height: 33%;
+        background-position: bottom center;
+        content: "";
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    .section_title {
+      h2 {
+        font-size: 36px;
+        color: $dark;
+        margin-bottom: 35px;
+        @include firasans(700);
+        line-height: 47px;
+        span {
+          color: $brand;
+        }
+      }
+      p {
+        margin-bottom: 35px;
+        color: $text;
+        font-size: 16px;
+        padding: 0 50px;
+        @include firasans(400);
+        line-height: 28px;
+      }
+      .boxed_btn {
+        border: none;
+        padding: 10px 30px;
+        background: $green_2;
+        color: #fff;
+        margin: 0 10px;
+        border-radius: 50px;
+        @include transition(all, 0.3s, ease-in-out);
+        &:hover {
+          background: $dark_4;
+        }
+        &.alt {
+          background: $dark_4;
+          &:hover {
+            background: $green_2;
+          }
+        }
+      }
+    }
+  }
+}
+
+// hosting brand 10
+.domain_form_10 {
+  @extend .domain_form;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  form {
+    background: $brand_9;
+    .domain_in {
+      color: $dark_4;
+      @include placeholdercolor($dark, 1);
+    }
+    .select_wrapper {
+      #chose_domain {
+        background: rgba($dark_4, 0.3);
+        border-radius: 40px;
+        color: $dark_4;
+      }
+      .arrow {
+        color: $dark_4;
+      }
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+    .search_domain_btn {
+      background: rgba(#fff, 1);
+      i,
+      span {
+        color: $dark_4;
+      }
+      &:hover {
+        i,
+        span {
+          color: #fff;
+        }
+        background: rgba($dark_4, 1);
+      }
+    }
+    .option_list li {
+      color: $dark_4 !important;
+      &:hover {
+        background: $brand_9 !important;
+        color: $dark_4 !important;
+      }
+    }
+  }
+  .domain_names {
+    li {
+      display: inline-block;
+      color: $dark_4;
+      font-size: 18px;
+      @include firasans(700);
+      margin: 0 18px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Responsive
+@media #{$medium_device} {
+  .hosting_brand {
+    .container {
+      .styled_bg {
+        &:before {
+          left: -150px;
+          width: 350px;
+          height: 73%;
+        }
+        &:after {
+          right: 5px;
+          width: 180px;
+          height: 25%;
+        }
+      }
+      .section_title {
+        h2 {
+          margin-top: 50px;
+          font-size: 30px;
+          margin-bottom: 25px;
+        }
+        p {
+          margin-bottom: 25px;
+          font-size: 14px;
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+  .hosting_brand_10 {
+    .container {
+      .styled_bg {
+        &:before {
+          left: -150px;
+          width: 320px;
+          height: 88%;
+        }
+        &:after {
+          right: 5px;
+          width: 180px;
+          height: 25%;
+        }
+      }
+      .section_title {
+        h2 {
+          font-size: 30px;
+          margin-bottom: 25px;
+        }
+        p {
+          margin-bottom: 25px;
+          font-size: 14px;
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+  .domain_form {
+    form {
+      margin-bottom: 30px;
+    }
+    .styled_bg_2 {
+      &:before {
+        left: 10%;
+        top: -117%;
+      }
+      &:after {
+        left: -72%;
+        top: 170%;
+      }
+    }
+    .domain_list {
+      img {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media #{$tab_device} {
+  .hosting_brand {
+    .container {
+      .styled_bg {
+        &:before {
+          left: -125px;
+          height: 60%;
+          width: 280px;
+        }
+        &:after {
+          right: 2px;
+          width: 100px;
+          height: 17%;
+        }
+      }
+      .section_title {
+        h2 {
+          margin-top: 60px;
+          font-size: 27px;
+          margin-bottom: 10px;
+        }
+        p {
+          margin-bottom: 25px;
+          font-size: 14px;
+          padding: 0 25px;
+          line-height: 20px;
+        }
+        .boxed_btn {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .hosting_brand_10 {
+    .container {
+      .styled_bg {
+        &:before {
+          left: -125px;
+          height: 95%;
+          width: 280px;
+        }
+        &:after {
+          right: 2px;
+          width: 100px;
+          height: 17%;
+        }
+      }
+      .section_title {
+        h2 {
+          font-size: 27px;
+          margin-bottom: 10px;
+        }
+        p {
+          margin-bottom: 25px;
+          font-size: 14px;
+          padding: 0 25px;
+          line-height: 20px;
+        }
+        .boxed_btn {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .domain_form {
+    margin-top: 25px;
+    .styled_bg_2 {
+      &:before {
+        left: 12%;
+        top: -95%;
+      }
+      &:after {
+        left: -70%;
+        top: 135%;
+      }
+    }
+  }
+  .domain_form form {
+    margin-bottom: 30px;
+    .domain_in {
+      width: 220px;
+      padding: 8px;
+      padding-left: 15px;
+    }
+    .select_wrapper {
+      height: 36px;
+      width: 80px;
+      &:before {
+        left: -10px;
+      }
+      #chose_domain {
+        font-size: 16px;
+        padding: 5px;
+        line-height: 28px;
+      }
+      .option_list {
+        li {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
+      .arrow {
+        right: 10%;
+      }
+    }
+  }
+  .domain_form_5 form .select_wrapper .arrow {
+    right: 0%;
+  }
+  .domain_form .search_domain_btn {
+    padding: 10px 30px;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+  .domain_form .domain_list {
+    img {
+      margin: 0 5px;
+      &:last-child,
+      &:nth-last-child(2) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+  .domain_form_2,
+  .domain_form_3 {
+    margin-top: 0px;
+  }
+  .domain_form_3 .domain_names li {
+    margin: 0 6px;
+  }
+  .domain_form_4 {
+    padding: 25px 0;
+    margin-top: 55px;
+    form {
+      margin-bottom: 20px;
+      .domain_in {
+        height: 40px;
+      }
+      .select_wrapper {
+        height: 40px;
+        .option_list {
+          li {
+            padding: 0px 15px;
+          }
+        }
+      }
+    }
+    .search_domain_btn {
+      height: 40px;
+    }
+    .domain_list {
+      padding: 8px 5px 0px;
+    }
+  }
+  .domain_form_5 {
+    form {
+      .domain_in {
+        height: 60px;
+      }
+      .select_wrapper {
+        height: 60px;
+        .option_list li {
+          padding: 0 15px;
+        }
+      }
+      .search_domain_btn {
+        height: 60px;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .domain_form_8 {
+    form {
+      .domain_in {
+        height: 60px;
+        width: 220px;
+      }
+      .select_wrapper {
+        height: 60px;
+        .option_list li {
+          padding: 0 15px;
+        }
+      }
+      .search_domain_btn {
+        height: 60px;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+
+@media #{$small_mobile} {
+  .hosting_brand {
+    .container {
+      .styled_bg {
+        display: none;
+        visibility: hidden;
+        &:before {
+          left: -140px;
+          height: 65%;
+        }
+        &:after {
+          right: 2px;
+          width: 100px;
+          height: 17%;
+        }
+      }
+      .section_title {
+        h2 {
+          margin-top: 45px;
+          margin-bottom: 10px;
+          font-size: 24px;
+          line-height: 30px;
+        }
+        p {
+          margin-bottom: 25px;
+          font-size: 14px;
+          padding: 0;
+        }
+        .boxed_btn.boxed_blue_btn {
+          display: inline-block;
+          padding: 10px 20px;
+        }
+        .boxed_btn.boxed_green_btn {
+          display: inline-block;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+  .hosting_brand_10 {
+    .container {
+      .styled_bg {
+        display: none;
+        visibility: hidden;
+        &:before {
+          left: -140px;
+          height: 65%;
+        }
+        &:after {
+          right: 2px;
+          width: 100px;
+          height: 17%;
+        }
+      }
+      .section_title {
+        h2 {
+          margin-top: 45px;
+          margin-bottom: 10px;
+          font-size: 24px;
+          line-height: 30px;
+        }
+        p {
+          margin-bottom: 25px;
+          font-size: 14px;
+          padding: 0;
+        }
+        .boxed_btn {
+          display: inline-block;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+  .domain_form {
+    padding: 30px 0;
+    margin-top: 45px;
+    .styled_bg_2 {
+      &:before {
+        left: 12%;
+        top: -95%;
+      }
+      &:after {
+        left: -80%;
+        top: 122%;
+      }
+    }
+  }
+  .domain_form form {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    width: 90%;
+    .domain_in {
+      width: 55%;
+      padding: 8px;
+      padding-left: 7px;
+      font-size: 13px;
+      float: left;
+      margin-right: 0;
+    }
+    .select_wrapper {
+      height: 33px;
+      width: 65px;
+      &:before {
+        left: -5px;
+      }
+      #chose_domain {
+        font-size: 14px;
+        padding: 5px;
+        line-height: 20px;
+      }
+      .option_list {
+        li {
+          font-size: 14px;
+          line-height: 14px;
+        }
+      }
+      .arrow {
+        right: 12%;
+      }
+    }
+  }
+  .domain_form .search_domain_btn {
+    width: 15%;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: 5px;
+    float: left;
+    padding: 8px 5px;
+  }
+  .domain_form .domain_list {
+    img {
+      height: 24px;
+      margin: 0 5px;
+      &:last-child,
+      &:nth-last-child(2) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+  .domain_form_2,
+  .domain_form_3 {
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .domain_form_3 .domain_names li {
+    margin: 5px;
+  }
+  .domain_form_4 {
+    padding: 20px 0;
+    margin-top: 45px;
+    form {
+      margin-bottom: 0px;
+      padding: 0;
+      .domain_in {
+        height: 40px;
+        width: 65%;
+      }
+      .select_wrapper {
+        height: 40px;
+        width: 30%;
+        margin-left: 3%;
+        .option_list li {
+          padding: 3px 8px;
+        }
+        #chose_domain {
+          padding: 10px;
+        }
+      }
+    }
+    .search_domain_btn {
+      height: 40px;
+      width: 50%;
+      margin: 15px 25% 0 !important;
+    }
+    .domain_list {
+      display: none;
+    }
+  }
+  .domain_form_5 {
+    form {
+      .domain_in {
+        height: 45px;
+      }
+      .select_wrapper {
+        height: 45px;
+        #chose_domain {
+          height: 30px;
+        }
+        .arrow {
+          right: 0;
+          top: 67%;
+        }
+        &:after {
+          height: 16px;
+        }
+      }
+      .search_domain_btn {
+        height: 45px;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .domain_form_8 {
+    width: 90%;
+    form {
+      flex-wrap: wrap;
+      .input-group {
+        width: 70%;
+      }
+      .domain_in {
+        height: 45px;
+        width: 60%;
+      }
+      .select_wrapper {
+        height: 45px;
+        width: 30%;
+        #chose_domain {
+          font-size: 14px;
+          padding: 8px !important;
+          line-height: 20px;
+        }
+        .option_list {
+          li {
+            font-size: 14px;
+            line-height: 1;
+          }
+        }
+        .arrow {
+          right: 15px;
+        }
+      }
+      .search_domain_btn {
+        height: 45px;
+        padding: 10px 20%;
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+@media #{$large_mobile} {
+  .domain_form form {
+    .domain_in {
+      padding-left: 15px;
+    }
+    .select_wrapper {
+      width: 80px;
+    }
+    .search_domain_btn {
+      margin-left: 10px;
+    }
+    .domain_list img:last-child,
+    .domain_list img:nth-last-child(2) {
+      visibility: visible;
+      display: inline-block;
+    }
+  }
+}

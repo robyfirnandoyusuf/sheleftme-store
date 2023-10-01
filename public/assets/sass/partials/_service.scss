@@ -1,0 +1,921 @@
+	// Service area 1
+	.service_area {
+	    @extend .section_padding_2;
+	    background: $dark_body;
+	    clear: both;
+	}
+	
+	.single_service_item {
+	    margin-bottom: 40px;
+	    padding: 30px;
+	    background: #fff;
+	    @include transition(all, .3s, ease-in-out);
+	    position: relative;
+	    top: 0;
+	    z-index: 3;
+	    @include boxshadow(0, 5px, 15px, 0, #dceff9, false);
+	    .service_img {
+	        margin: auto;
+	        margin-bottom: 20px;
+	        width: 80px;
+	        height: 80px;
+	    }
+	    h3 {
+	        @include firasans(700);
+	        font-size: 24px;
+	        line-height: 32px;
+	        margin-bottom: 15px;
+	        color: $dark;
+	        @include transition(all, .3s, ease-in-out);
+	    }
+	    p {
+	        color: $text;
+	        margin-bottom: 15px;
+	        @include firasans(400);
+	        font-size: 16px;
+	        line-height: 28px;
+	    }
+	    .boxed_btn {
+	        @extend .gradient_btn_main;
+	        @include gradient_bg(right);
+	        padding: 15px 20px;
+	        border-radius: 5px;
+	        &:after {
+	            background: $green;
+	            border-radius: 5px
+	        }
+	    }
+	    &:before {
+	        width: 3px;
+	        height: 100%;
+	        top: 0;
+	        left: auto;
+	        @include gradient_bg(top);
+	        right: 0px;
+	        position: absolute;
+	        z-index: -1;
+	        @include transition(all, .3s, ease-in-out);
+	        content: '';
+	        opacity: 0;
+	    }
+	    &:hover:before {
+	        opacity: 1;
+	    }
+	    &:hover {
+	        top: -10px;
+	        @include boxshadow(0, 15px, 45px, 0, #dceff9, false);
+	    }
+	    &:hover h3 {
+	        color: $brand;
+	    }
+	}
+	
+	// Service area 2
+	.service_area_2 {
+	    @extend .section_padding_2;
+	    .single_service_item_2 {
+	        margin-bottom: 40px;
+	        padding: 30px;
+	        background: #fff;
+	        @include transition(all, .3s, ease-in-out);
+	        position: relative;
+	        top: 0;
+	        z-index: 3;
+	        @include boxshadow(0, 5px, 15px, 0, #dceff9, false);
+	        border-radius: 40px;
+	        .service_img {
+	            margin: auto;
+	            margin-bottom: 20px;
+	            width: 80px;
+	            height: 80px;
+	        }
+	        h3 {
+	            @include firasans(700);
+	            font-size: 24px;
+	            line-height: 32px;
+	            margin-bottom: 15px;
+	            color: $dark;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        p {
+	            color: $text;
+	            margin-bottom: 15px;
+	            @include firasans(400);
+	            font-size: 16px;
+	            line-height: 28px;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        .boxed_btn {
+	            @extend .gradient_btn_main;
+	            border-radius: 30px;
+	            @include gradient_bg_2(top);
+	            color: #fff;
+	            padding: 14px 22px;
+	            border: 2px solid #fff;
+	            &:after {
+	                border-radius: 20px;
+	                background: #fff;
+	                border: none;
+	            }
+	            &:hover {
+	                color: $brand_2;
+	                border: 2px solid #fff;
+	            }
+	        }
+	        &:before {
+	            width: 100%;
+	            height: 100%;
+	            top: 0;
+	            left: auto;
+	            @include gradient_bg(top);
+	            right: 0px;
+	            position: absolute;
+	            z-index: -1;
+	            border-radius: 40px;
+	            @include transition(all, .3s, ease-in-out);
+	            content: '';
+	            opacity: 0;
+	        }
+	        &:hover:before {
+	            opacity: 1;
+	            @include gradient_bg_2(top);
+	        }
+	        &:hover {
+	            top: -10px;
+	            @include boxshadow(0, 15px, 45px, 0, #dceff9, false);
+	        }
+	        &:hover h3 {
+	            color: #fff;
+	        }
+	        &:hover p {
+	            color: #a7b6f1;
+	        }
+	    }
+	}
+	
+	// Service area 3
+	.service_area_3 {
+	    background: $brand_3;
+	    @extend .section_padding_2;
+	    .section_title_main_2 h2,
+	    .section_title_main_2 h3 {
+	        color: #fff;
+	    }
+	    .section_title_main_2 h2:after {
+	        background: rgba(0, 0, 0, 0.2);
+	    }
+	    .single_service_item_3 {
+	        margin-bottom: 40px;
+	        background: none;
+	        box-shadow: none;
+	        padding: 30px;
+	        @include transition(all, .3s, ease-in-out);
+	        position: relative;
+	        top: 0;
+	        z-index: 3;
+	        .service_img {
+	            margin: auto;
+	            margin-bottom: 20px;
+	            width: 80px;
+	            height: 80px;
+	        }
+	        h3 {
+	            @include firasans(700);
+	            font-size: 24px;
+	            line-height: 32px;
+	            margin-bottom: 15px;
+	            color: #fff;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        p {
+	            color: #fff;
+	            margin-bottom: 15px;
+	            @include firasans(400);
+	            font-size: 16px;
+	            line-height: 28px;
+	        }
+	        .boxed_btn {
+	            margin-bottom: 0;
+	            background: #fff;
+	            padding: 15px 20px;
+	            color: $brand_3;
+	            border-radius: 0;
+	            display: inline-block;
+	            @include transition(all, .3s, ease-in-out);
+	            &:hover {
+	                border-radius: 0;
+	                background: $dark;
+	                color: #fff;
+	            }
+	        }
+	        &:hover {
+	            background: rgba(0, 0, 0, 0.1);
+	            box-shadow: none;
+	            color: #fff;
+	            top: -5px;
+	        }
+	        &:hover h3 {
+	            color: $brand;
+	        }
+	    }
+	}
+	
+	// Service area 4
+	.service_area_4 {
+	    @extend .section_padding_2;
+	    .single_service_item_4 {
+	        margin-bottom: 40px;
+	        padding: 30px;
+	        background: #fff;
+	        @include transition(all, .3s, ease-in-out);
+	        position: relative;
+	        top: 0;
+	        z-index: 3;
+	        @include boxshadow(0, 5px, 15px, 0, #dceff9, false);
+	        border-radius: 40px;
+	        .service_img {
+	            margin: auto;
+	            margin-bottom: 20px;
+	            width: 80px;
+	            height: 80px;
+	        }
+	        h3 {
+	            @include firasans(700);
+	            font-size: 24px;
+	            line-height: 32px;
+	            margin-bottom: 15px;
+	            color: $dark;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        p {
+	            color: $text;
+	            margin-bottom: 15px;
+	            @include firasans(400);
+	            font-size: 16px;
+	            line-height: 28px;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        .boxed_btn {
+	            @extend .gradient_btn_main;
+	            border-radius: 30px;
+	            @include gradient_bg_3(top);
+	            color: #fff;
+	            padding: 14px 22px;
+	            border: 2px solid #fff;
+	            &:after {
+	                border-radius: 20px;
+	                background: #fff;
+	                border: none;
+	            }
+	            &:hover {
+	                color: $dark;
+	                border: 2px solid #fff;
+	            }
+	        }
+	        &:before {
+	            width: 100%;
+	            height: 100%;
+	            top: 0;
+	            left: auto;
+	            @include gradient_bg_3(top);
+	            right: 0px;
+	            position: absolute;
+	            z-index: -1;
+	            border-radius: 40px;
+	            @include transition(all, .3s, ease-in-out);
+	            content: '';
+	            opacity: 0;
+	        }
+	        &:hover:before {
+	            opacity: 1;
+	        }
+	        &:hover {
+	            top: -10px;
+	            @include boxshadow(0, 15px, 45px, 0, #dceff9, false);
+	        }
+	        &:hover h3 {
+	            color: #fff;
+	        }
+	        &:hover p {
+	            color: #fff;
+	        }
+	    }
+	}
+	
+	// Service area 5
+	.single_service_item_comn_2 {
+	    overflow: hidden;
+	    margin: 0 15px;
+	    border-radius: 20px;
+	    background: #fff;
+	    padding: 30px;
+	    position: relative;
+	    &.colored_bg {
+	        border: 1px solid transparent;
+	        z-index: 1;
+	    }
+	    h3 {
+	        font-size: 36px;
+	        margin-bottom: 20px;
+	        @include firasans(500);
+	    }
+	    p {
+	        margin-bottom: 20px;
+	        font-size: 16px;
+	        line-height: 1.5;
+	    }
+	    li {
+	        position: relative;
+	        z-index: 2;
+	        margin-bottom: 15px;
+	        @include firasans(500);
+	        font-size: 18px;
+	        i {
+	            @include transition(all, .3s, ease-in-out);
+	            font-weight: 900;
+	            margin-right: 5px;
+	        }
+	        &:last-child {
+	            margin-bottom: 0;
+	        }
+	    }
+	    a.boxed_btn {
+	        margin-top: 30px;
+	        padding: 12px 15px;
+	        border-radius: 5px;
+	        font-size: 14px;
+	        @include firasans(700);
+	        text-transform: uppercase;
+	        i {
+	            margin-left: 5px;
+	            font-size: 12px;
+	            font-weight: 700;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        &:after {
+	            border-radius: 5px;
+	        }
+	    }
+	    img {
+	        position: absolute;
+	        left: 42%;
+	        top: 40%;
+	    }
+	}
+	
+	// Service area 6
+	.service_carousel_area_1 {
+	    @extend .section_padding;
+	    position: relative;
+	    z-index: 2;
+	    .service_carousel {
+	        padding-bottom: 100px;
+	        .swiper-pagination-bullet {
+	            color: beige;
+	            background: $brand_2;
+	            width: 15px;
+	            height: 15px;
+	            opacity: 1;
+	            &.swiper-pagination-bullet-active {
+	                opacity: .5;
+	            }
+	        }
+	    }
+	    .single_service_item_5 {
+	        @extend .single_service_item_comn_2;
+	        border: 1px solid $brand_2;
+	        &.colored_bg {
+	            @include gradient_bg_4(right);
+	            color: #fff;
+	            h3 {
+	                background: none !important;
+	                -webkit-text-fill-color: #fff;
+	            }
+	            h3,
+	            p,
+	            li,
+	            i {
+	                color: #fff;
+	            }
+	            a.boxed_btn {
+	                background: rgba(#fff, .15);
+	                color: #fff;
+	                &:hover {
+	                    color: $dark;
+	                }
+	                &:after {
+	                    background: #fff;
+	                }
+	                &:hover i {
+	                    color: $dark;
+	                }
+	            }
+	        }
+	        h3 {
+	            color: $brand_5;
+	        }
+	        p {
+	            color: $text;
+	        }
+	        li {
+	            color: $dark;
+	            i {
+	                color: $green;
+	            }
+	        }
+	        a.boxed_btn {
+	            @include gradient_bg_4(right);
+	            @extend .gradient_btn_main;
+	            color: #fff;
+	            i {
+	                color: #fff;
+	            }
+	            &:after {
+	                background: $brand_6;
+	            }
+	            &:hover,
+	            &:hover i {
+	                color: #fff;
+	            }
+	        }
+	    }
+	}
+	
+	// Service area 7
+	.service_carousel_area_4 {
+	    @extend .section_padding;
+	    position: relative;
+	    z-index: 2;
+	    .service_carousel {
+	        padding-bottom: 100px;
+	        .swiper-pagination-bullet {
+	            color: beige;
+	            background: $brand_2;
+	            width: 15px;
+	            height: 15px;
+	            opacity: 1;
+	            &.swiper-pagination-bullet-active {
+	                opacity: .5;
+	            }
+	        }
+	    }
+	}
+	
+	// Service area 8
+	.service_carousel_area_2 {
+	    @extend .section_padding;
+	    position: relative;
+	    z-index: 2;
+	    .single_service_item_6 {
+	        overflow: hidden;
+	        margin: 0 15px;
+	        border-radius: 20px;
+	        background: #fff;
+	        padding: 30px;
+	        position: relative;
+	        border: 1px solid $brand_6;
+	        &.colored_bg {
+	            background: $brand_6;
+	            color: #fff;
+	            border: 1px solid transparent;
+	            z-index: 1;
+	            h3,
+	            p,
+	            li,
+	            i {
+	                color: #fff;
+	            }
+	            a.boxed_btn {
+	                background: rgba(#fff, .15);
+	                color: #fff;
+	                &:hover {
+	                    color: $dark;
+	                    background: #fff;
+	                }
+	                &:hover i {
+	                    color: $dark;
+	                }
+	            }
+	        }
+	        h3 {
+	            font-size: 36px;
+	            margin-bottom: 20px;
+	            @include firasans(500);
+	            color: $brand_5;
+	        }
+	        p {
+	            margin-bottom: 20px;
+	            font-size: 16px;
+	            line-height: 1.5;
+	        }
+	        li {
+	            margin-bottom: 15px;
+	            @include firasans(500);
+	            position: relative;
+	            z-index: 2;
+	            color: $dark;
+	            font-size: 18px;
+	            i {
+	                @include transition(all, .3s, ease-in-out);
+	                color: $green;
+	                font-weight: 900;
+	                margin-right: 5px;
+	            }
+	            &:last-child {
+	                margin-bottom: 0;
+	            }
+	        }
+	        a.boxed_btn {
+	            margin-top: 30px;
+	            padding: 12px 15px;
+	            background: $brand_6;
+	            border-radius: 5px;
+	            color: #fff;
+	            font-size: 14px;
+	            @include firasans(700);
+	            text-transform: uppercase;
+	            display: inline-block;
+	            @include transition(all, .3s, ease-in-out);
+	            i {
+	                margin-left: 5px;
+	                font-size: 12px;
+	                font-weight: 700;
+	                color: #fff;
+	                @include transition(all, .3s, ease-in-out);
+	            }
+	            &:hover {
+	                color: #fff;
+	                background: $dark_3;
+	            }
+	            &:hover i {
+	                color: #fff;
+	            }
+	        }
+	        img {
+	            position: absolute;
+	            left: 42%;
+	            top: 40%;
+	        }
+	    }
+	    .service_carousel {
+	        padding-bottom: 100px;
+	        .swiper-pagination-bullet {
+	            color: beige;
+	            background: $brand_6;
+	            width: 15px;
+	            height: 15px;
+	            opacity: 1;
+	            &.swiper-pagination-bullet-active {
+	                opacity: .5;
+	            }
+	        }
+	    }
+	}
+	
+	// Service area 9
+	.service_carousel_area_3 {
+	    @extend .section_padding;
+	    position: relative;
+	    z-index: 99;
+	}
+	
+	// Service area 10
+	.single_service_item_7 {
+	    overflow: hidden;
+	    margin: 0 15px;
+	    border-radius: 20px;
+	    background: #fff;
+	    padding: 30px;
+	    position: relative;
+	    border: 1px solid $brand_7;
+	    &.colored_bg {
+	        @include gradient_bg_6(right);
+	        color: #fff;
+	        border: 1px solid transparent;
+	        z-index: 1;
+	        h3 {
+	            background: none !important;
+	            -webkit-text-fill-color: #fff;
+	        }
+	        h3,
+	        p,
+	        li,
+	        i {
+	            color: #fff;
+	        }
+	        a.boxed_btn {
+	            background: rgba(#000, .15);
+	            color: #fff;
+	            &:hover {
+	                color: $brand_7;
+	                background: #fff;
+	            }
+	            &:after {
+	                background: #fff;
+	            }
+	            &:hover i {
+	                color: $brand_7;
+	            }
+	        }
+	    }
+	    h3 {
+	        font-size: 36px;
+	        margin-bottom: 20px;
+	        @include firasans(500);
+	        color: $brand_7;
+	    }
+	    p {
+	        margin-bottom: 20px;
+	        font-size: 16px;
+	        line-height: 1.5;
+	    }
+	    li {
+	        margin-bottom: 15px;
+	        @include firasans(500);
+	        position: relative;
+	        z-index: 2;
+	        color: $dark;
+	        font-size: 18px;
+	        i {
+	            @include transition(all, .3s, ease-in-out);
+	            color: $brand_7;
+	            font-weight: 900;
+	            margin-right: 5px;
+	        }
+	        &:last-child {
+	            margin-bottom: 0;
+	        }
+	    }
+	    a.boxed_btn {
+	        margin-top: 30px;
+	        padding: 12px 15px;
+	        @include gradient_bg_6(right);
+	        border-radius: 5px;
+	        @extend .gradient_btn_main;
+	        color: #fff;
+	        font-size: 14px;
+	        @include firasans(700);
+	        text-transform: uppercase;
+	        i {
+	            margin-left: 5px;
+	            font-size: 12px;
+	            font-weight: 700;
+	            color: #fff;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        &:after {
+	            border-radius: 5px;
+	            background: $brand_7;
+	        }
+	        &:hover,
+	        &:hover i {
+	            color: #fff;
+	        }
+	    }
+	    img {
+	        position: absolute;
+	        left: 42%;
+	        top: 40%;
+	    }
+	}
+	
+	// Service area 2
+	.service_area_8 {
+	    @extend .section_padding_2;
+	    .single_service_item_8 {
+	        margin-bottom: 40px;
+	        padding: 30px;
+	        background: #fff;
+	        @include transition(all, .3s, ease-in-out);
+	        position: relative;
+	        top: 0;
+	        text-align: left;
+	        overflow: hidden;
+	        z-index: 3;
+	        @include boxshadow(0, 0px, 43px, 0, rgba(129, 94, 103, 0.1), false);
+	        border-radius: 80px 0;
+	        .service_img {
+	            margin-bottom: 20px;
+	            width: 80px;
+	            height: 80px;
+	            padding: 25px;
+	            @include transition(all, .3s, ease-in-out);
+	            border-radius: 50%;
+	            background: #ffe6e5;
+	        }
+	        h3 {
+	            @include firasans(700);
+	            font-size: 24px;
+	            line-height: 32px;
+	            margin-bottom: 15px;
+	            color: $dark;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        p {
+	            color: $text;
+	            margin-bottom: 15px;
+	            @include firasans(400);
+	            font-size: 16px;
+	            line-height: 28px;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        .boxed_btn {
+	            margin-top: 15px;
+	            border-radius: 30px;
+	            background: #fff;
+	            display: inline-block;
+	            color: #eb566c;
+	            padding: 10px 22px;
+	            border: 2px solid #eb566c;
+	        }
+	        &:after,
+	        &:before {
+	            width: 200px;
+	            height: 200px;
+	            border-radius: 55px;
+	            content: '';
+	            transform: rotate(-5deg);
+	            position: absolute;
+	            @include gradient_bg_8(top);
+	            opacity: 0;
+	            @include transition(all, .3s, ease-in-out);
+	        }
+	        &:after {
+	            z-index: -2;
+	            top: -220px;
+	            right: -70px;
+	        }
+	        &:before {
+	            z-index: -1;
+	            top: -220px;
+	            right: -220px;
+	        }
+	        &:hover:before {
+	            top: -100px;
+	            right: -100px;
+	            opacity: .6;
+	        }
+	        &:hover:after {
+	            top: -120px;
+	            right: -75px;
+	            opacity: .6;
+	        }
+	        &:hover {
+	            top: -10px;
+	            background-color: #050234;
+	            @include boxshadow(0, 0px, 43px, 0, rgba(129, 94, 103, 0.3), false);
+	        }
+	        &:hover .boxed_btn {
+	            @include gradient_bg_8(left);
+	            color: #fff;
+	            border: none;
+	            &:hover {
+	                background: #fff;
+	                color: #eb566c;
+	                border: none;
+	            }
+	        }
+	        &:hover h3 {
+	            color: #fff;
+	        }
+	        &:hover .service_img {
+	            background: rgba(255, 255, 255, 0.25);
+	        }
+	        &:hover p {
+	            color: #fff;
+	        }
+	    }
+	}
+	
+	// Responsive
+	@media #{$medium_device} {
+	    .single_service_item_comn_2 img,
+	    .service_carousel_area_2 .single_service_item_6 img,
+	    .service_carousel_area_3 .single_service_item_7 img {
+	        top: 42%;
+	    }
+	}
+	
+	@media #{$tab_device} {
+	    .service_area {
+	        padding-bottom: 20px;
+	    }
+	    .single_service_item_comn_2,
+	    .service_carousel_area_2 .single_service_item_6,
+	    .service_carousel_area_3 .single_service_item_7 {
+	        margin: 0 60px;
+	    }
+	}
+	
+	@media #{$small_mobile} {
+	    .service_area {
+	        padding-bottom: 10px;
+	    }
+	    .single_service_item {
+	        h3 {
+	            font-size: 18px;
+	        }
+	        p {
+	            font-size: 14px;
+	        }
+	        .boxed_btn {
+	            padding: 10px 20px;
+	            span {
+	                font-size: 14px;
+	            }
+	        }
+	    }
+	    .single_service_item_comn_2 {
+	        padding: 15px;
+	        h3 {
+	            font-size: 24px;
+	            margin-bottom: 10px;
+	        }
+	        p {
+	            font-size: 14px;
+	            margin-bottom: 15px;
+	        }
+	        li {
+	            font-size: 14px;
+	            margin-bottom: 10px;
+	        }
+	        .boxed_btn {
+	            margin-top: 10px;
+	            padding: 10px 15px;
+	        }
+	    }
+	    .service_carousel_area_1 .single_service_item_5 {
+	        @include gradient_bg_4(right);
+	        padding: 15px;
+	        h3 {
+	            font-size: 24px;
+	            margin-bottom: 10px;
+	            color: #fff;
+	        }
+	        p {
+	            font-size: 14px;
+	            margin-bottom: 15px;
+	            color: #fff;
+	        }
+	        li {
+	            font-size: 14px;
+	            margin-bottom: 10px;
+	            color: #fff;
+	        }
+	        .boxed_btn {
+	            margin-top: 10px;
+	            padding: 10px 15px;
+	            background: #ffffff2a;
+	        }
+	    }
+	    .service_carousel_area_2 .single_service_item_6 {
+	        background: $brand_6;
+	        padding: 15px;
+	        h3 {
+	            font-size: 24px;
+	            margin-bottom: 10px;
+	            color: #fff;
+	        }
+	        p {
+	            font-size: 14px;
+	            margin-bottom: 15px;
+	            color: #fff;
+	        }
+	        li {
+	            font-size: 14px;
+	            margin-bottom: 10px;
+	            color: #fff;
+	        }
+	        .boxed_btn {
+	            margin-top: 10px;
+	            padding: 10px 15px;
+	            background: #ffffff2a;
+	        }
+	    }
+	    .service_carousel_area_3 .single_service_item_7 {
+	        @include gradient_bg_6(right);
+	        padding: 15px;
+	        h3 {
+	            font-size: 24px;
+	            margin-bottom: 10px;
+	            color: #fff;
+	        }
+	        p {
+	            font-size: 14px;
+	            margin-bottom: 15px;
+	            color: #fff;
+	        }
+	        li {
+	            font-size: 14px;
+	            margin-bottom: 10px;
+	            color: #fff;
+	        }
+	        .boxed_btn {
+	            margin-top: 10px;
+	            padding: 10px 15px;
+	            background: #ffffff2a;
+	        }
+	    }
+	}
+	
+	@media #{$large_mobile} {}

@@ -1,0 +1,232 @@
+// Counter Section 1
+.counter_1 {
+    padding-top: 100px;
+}
+
+.counter_box {
+    height: 100px;
+    p {
+        @include rubik(500);
+        position: absolute;
+        font-size: 48px;
+        text-align: center;
+        color: #fff;
+        span {
+            font-size: 48px;
+        }
+        .header {
+            font-size: 20px;
+            @include rubik(500);
+            color: #fff;
+            display: block;
+        }
+    }
+}
+
+// Counter Section 2
+.counter_section_2 {
+    padding-bottom: 50px;
+}
+
+.single_counter_2 {
+    text-align: center;
+    .counter_img {
+        height: 105px;
+    }
+    p {
+        font-size: 18px;
+        margin-top: 10px;
+        color: $dark;
+        @include firasans(400);
+    }
+    h4 {
+        font-size: 30px;
+        @include firasans(500);
+        margin-top: 15px;
+        color: $brand_3;
+    }
+}
+
+// Counter section 3
+.counter_section_3 {
+    @include gradient_bg_4(top);
+    .single_counter_3 {
+        color: #fff;
+        i {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+        span {
+            font-size: 48px;
+            @include firasans(700);
+            margin-bottom: 20px;
+        }
+        h4 {
+            font-size: 24px;
+            @include firasans(600);
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Counter Section 4
+.counter_section_4 {
+    .single_counter_4 {
+        text-align: center;
+        .counter_img {
+            height: 105px;
+            width: 105px;
+            position: relative;
+            z-index: 1;
+            margin: 0 auto;
+            img {
+                @include transition(all, .3s, ease-in-out);
+            }
+            &::after {
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                @include transition(all, .3s, ease-in-out);
+                top: 0;
+                width: 100%;
+                height: 100%;
+                content: '';
+                @include gradient_bg_8(left);
+                border-radius: 50%;
+                opacity: .05;
+            }
+        }
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #000033;
+            @include transition(all, .3s, ease-in-out);
+            @include firasans(700);
+        }
+        h4 {
+            font-size: 30px;
+            @include firasans(500);
+            margin-top: 15px;
+            @include transition(all, .3s, ease-in-out);
+            color: #eb566c;
+        }
+        &:hover {
+            .counter_img:after {
+                opacity: 1;
+            }
+            .counter_img img {
+                filter: brightness(0) invert(1);
+            }
+            p {
+                color: #eb566c;
+            }
+            h4 {
+                color: #000033;
+            }
+        }
+    }
+}
+
+@media #{$medium_device} {}
+
+@media #{$tab_device} {
+    .counter_1 {
+        padding-top: 70px;
+    }
+    .counter_box {
+        height: 80px;
+        p {
+            font-size: 36px;
+            span {
+                font-size: 36px;
+            }
+            .header {
+                font-size: 18px;
+            }
+        }
+    }
+    .single_counter_2 {
+        .counter_img {
+            height: 75px;
+            img {
+                width: 60px;
+            }
+        }
+        p {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        h4 {
+            font-size: 22px;
+            @include firasans(500);
+            margin-top: 5px;
+        }
+    }
+    .counter_section_3 {
+        .single_counter_3 {
+            i {
+                font-size: 36px;
+            }
+            span {
+                font-size: 36px;
+            }
+            h4 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media #{$small_mobile} {
+    .counter_1 {
+        padding-top: 50px;
+    }
+    .counter_box {
+        margin-top: 20px;
+        height: 80px;
+        p {
+            font-size: 36px;
+            span {
+                font-size: 36px;
+            }
+            .header {
+                font-size: 18px;
+            }
+        }
+    }
+    .single_counter_2 {
+        margin-bottom: 40px;
+        .counter_img {
+            height: 75px;
+            img {
+                width: 60px;
+            }
+        }
+        p {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        h4 {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+    }
+    .counter_section_3 {
+        .single_counter_3 {
+            margin-bottom: 50px;
+            i {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+            span {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+            h4 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media #{$large_mobile} {}

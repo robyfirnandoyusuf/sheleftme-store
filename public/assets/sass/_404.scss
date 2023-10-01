@@ -1,0 +1,144 @@
+
+.body404_light{
+    position: relative;
+	z-index: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/404_light_bg.png');
+}
+
+.content404{
+	padding: 700px 0 100px;
+    color: $dark_3;
+	h1 {
+	    font-size: 36px;
+	    margin-bottom: 65px;
+	    @include firasans(400);
+	}
+	a {
+	    color: #fff;
+	    display: inline-flex;
+	    width: 186px;
+	    height: 70px;
+	    justify-content: center;
+	    align-items: center;
+	    border-radius: 10px;
+	    margin: 0 10px 90px;
+	    flex-direction: column;
+	    font-size: 24px;
+	    @include firasans(700);
+	    @include transition(all, .3s, ease-in-out);
+	    &.boxed_btn {
+		    background: #f22525;
+		  	    &:hover{ 
+		        background: darken(#f22525, 10%);
+		    }
+		}
+		&.boxed_btn_alt {
+		    background: #03b8dd;
+		    &:hover{ 
+		        background: darken(#03b8dd, 10%);
+		    }
+		}
+	}
+	.search_box {
+	    height: 70px;
+	    border-radius: 10px;
+	    position: relative;
+	    width: 530px;
+	    background: #fff;
+	    margin: 0 auto;
+	    input{
+			border-radius: 10px 0 0 10px;		  
+			@include boxshadow(0px, 5px, 24px, 0px, rgba(0, 0, 0, 0.1), false);
+		    position: absolute;
+		    left: 0;
+		    border: 1px solid rgb(163, 210, 228);
+		    width: 80%;
+		    padding-right: 15%;
+		    height: 100%;
+		    padding-left: 25px;
+			@include firasans(400);
+			font-size: 24px;
+		}
+		button {
+		    background: $brand_2;
+		    @include transition(all, 0.3s, ease-in-out);
+		    border-radius: 10px;
+		    cursor: pointer;
+		    color: #fff;
+		    position: absolute;
+		    width: 35%;
+		    height: 100%;
+		    right: 0;
+		    border: none;
+		    @include firasans(700);
+		    font-size: 24px;
+		    &:hover{ 
+		        background: darken($brand_2, 10%);
+		    }
+		}
+	}
+}
+
+@media #{$medium_device}{
+
+}
+@media #{$tab_device}{
+	.content404{
+		padding: 350px 0 70px;
+		h1 {
+		    font-size: 28px;
+		    margin-bottom: 45px;
+		}
+		a {
+		    width: 150px;
+		    height: 50px;
+		    margin: 0 10px 60px;
+		    font-size: 18px;
+		}
+		.search_box {
+		    height: 50px;
+		    width: 400px;
+		    input{
+		    padding-left: 15px;
+		    font-size: 18px;
+			}
+			button {
+			    font-size: 18px;
+			}
+		}
+	}
+}
+@media #{$small_mobile}{
+	.content404{
+		padding: 300px 0 50px;
+		h1 {
+		    font-size: 24px;
+		    margin-bottom: 35px;
+		}
+		a {
+		    width: 130px;
+		    height: 40px;
+		    margin: 0 5px 40px;
+		    font-size: 16px;
+		}
+		.search_box {
+		    height: 40px;
+		    width: 80%;
+		    input{
+		    padding-left: 10px;
+		    font-size: 16px;
+			}
+			button {
+			    font-size: 16px;
+			}
+		}
+	}
+}
+@media #{$large_mobile}{
+	.content404{
+		.search_box { width: 360px; }
+	}
+}

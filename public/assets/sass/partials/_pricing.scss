@@ -1,0 +1,1599 @@
+// Pricing Table Dropdown
+.select_month_wrapper {
+  position: relative;
+  z-index: 8;
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  margin-bottom: 110px;
+  #chose_plan {
+    @include transition(all, 0.3s, ease-in-out);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border-radius: 6px;
+    top: 0;
+    margin: 0;
+    border: none;
+    background: #fff;
+    text-shadow: 0 0 0 $dark;
+    color: transparent;
+    padding: 12px 20px;
+    cursor: pointer;
+    line-height: 36px;
+    font-size: 18px;
+    @include firasans(700);
+    @include boxshadow(0px, 5px, 10px, 0px, rgba(0, 0, 0, 0.1), false);
+  }
+  .option_list {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    top: 100%;
+    display: none;
+    opacity: 0;
+    @include transition(all, 0.3s, ease-in-out);
+    li {
+      @include firasans(400);
+      font-size: 16px;
+      line-height: 30px;
+      color: $brand;
+      background: #fff;
+      cursor: pointer;
+      text-align: left;
+      margin: 0;
+      padding: 5px 15px;
+      @include transition(all, 0.3s, ease-in-out);
+      &:hover {
+        color: #fff;
+        background: $brand;
+      }
+    }
+    &.dropon {
+      display: block !important;
+      opacity: 1;
+      top: 130%;
+      @include boxshadow(
+        2.347px,
+        4.415px,
+        20px,
+        0px,
+        rgba(23, 6, 125, 0.3),
+        false
+      );
+    }
+  }
+  .arrow {
+    position: absolute;
+    z-index: 19;
+    left: auto;
+    right: 9%;
+    top: calc(50% - 8px);
+    width: 0px;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid #fff;
+    cursor: pointer;
+    margin: 0;
+    @include transition(all, 0.3s, ease-in-out);
+    transform: scaleY(1) rotate(0deg);
+    &.reverce {
+      transform: scaleY(-1) rotate(0deg);
+    }
+  }
+  .split {
+    position: absolute;
+    z-index: 17;
+    background: $green;
+    width: 24%;
+    height: 100%;
+    left: auto;
+    border-radius: 0 6px 6px 0;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+  }
+}
+
+// Package Tabling (Switching monthly/yearly)
+.tab_wrapper {
+  position: relative;
+  width: 100%;
+  height: 780px;
+  .tab_1,
+  .tab_2 {
+    position: absolute;
+    width: 100%;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+  .tab_2 {
+    opacity: 0;
+  }
+}
+
+// Pakege_Pricing_Area 1
+.packege_pricing_area {
+  @extend .section_padding;
+  background: $dark_body;
+  position: relative;
+  .tab_wrapper {
+    height: 525px;
+  }
+  .single_pakege {
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 5px 10px 0px rgba(12, 186, 252, 0.1);
+    position: relative;
+    top: 0;
+    z-index: 1;
+    @include transition(all, 0.3s, ease-in-out);
+    .sticker {
+      position: absolute;
+      width: auto;
+      font-size: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -15px;
+      border-radius: 3px;
+      color: #fff;
+      margin: 0;
+      padding: 10px 30px;
+      background: $dark;
+      @include firasans(500);
+      @include transition(all, 0.3s, ease-in-out);
+      &.yellow_color {
+        background: $yellow;
+      }
+    }
+    .pakege_icon {
+      margin-top: 40px;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+    }
+    h2 {
+      font-size: 48px;
+      @include firasans(700);
+      color: $dark;
+      margin-bottom: 35px;
+      margin-top: 12px;
+    }
+    ul li {
+      font-size: 16px;
+      color: $text;
+      margin-bottom: 25px;
+    }
+    .boxed_btn {
+      @extend .gradient_btn_main;
+      @include gradient_bg(right);
+      padding: 12px 24px;
+      margin-bottom: 30px;
+      border-radius: 5px;
+      &:after {
+        background: $green;
+        border-radius: 5px;
+      }
+    }
+    &:hover {
+      @include boxshadow(0px, 10px, 10px, 0px, rgba(12, 186, 252, 0.2), false);
+      top: -10px;
+    }
+  }
+}
+
+// Pakege_Pricing_Area 2
+.packege_pricing_area_2 {
+  @extend .section_padding;
+  .tab_wrapper {
+    height: 580px;
+  }
+  .select_month_wrapper {
+    margin: 0px auto;
+    width: 75%;
+    margin-bottom: 60px;
+    #chose_plan {
+      border-radius: 30px;
+    }
+    .split {
+      border-radius: 0 30px 30px 30px;
+    }
+    .option_list li {
+      color: $brand_2 !important;
+      &:hover {
+        background: $brand_2 !important;
+        color: #fff !important;
+      }
+    }
+  }
+  .single_pakege_2 {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0px 65px;
+    border-radius: 40px;
+    top: 0;
+    background: #fff;
+    background-image: url("../img/pricing/pricing_footer.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    @include transition(all, 0.3s, ease-in-out);
+    @include boxshadow(0px, 3px, 12px, 0px, rgba(12, 186, 252, 0.3), false);
+    &:hover {
+      @include boxshadow(0px, 10px, 20px, 0px, rgba(0, 3, 111, 0.3), false);
+      top: -10px;
+    }
+    .sticker {
+      font-size: 16px;
+      color: $brand;
+      text-transform: uppercase;
+      @include gradient_bg_2(top);
+      @include firasans(700);
+      top: 0;
+      width: 150px;
+      padding: 20px 10px 100px;
+      border-radius: 0 0 100px 100px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+    .pakege_service_list {
+      li {
+        margin-bottom: 15px;
+        padding: 5px 0;
+        color: $brand_2;
+      }
+      li:nth-child(2n + 1) {
+        background: -webkit-linear-gradient(
+          left,
+          rgba(18, 23, 201, 0) 0%,
+          rgba(19, 174, 255, 0.15) 47%,
+          rgba(19, 172, 255, 0.14902) 48%,
+          rgba(24, 45, 238, 0) 100%
+        );
+        background: -o-linear-gradient(
+          left,
+          rgba(18, 23, 201, 0) 0%,
+          rgba(19, 174, 255, 0.15) 47%,
+          rgba(19, 172, 255, 0.14902) 48%,
+          rgba(24, 45, 238, 0) 100%
+        );
+        background: linear-gradient(
+          to right,
+          rgba(18, 23, 201, 0) 0%,
+          rgba(19, 174, 255, 0.15) 47%,
+          rgba(19, 172, 255, 0.14902) 48%,
+          rgba(24, 45, 238, 0) 100%
+        );
+      }
+    }
+    h2 {
+      font-size: 48px;
+      @include firasans(700);
+      position: relative;
+      padding: 50px 0 65px;
+      margin: 0px;
+      color: #fff;
+    }
+    .boxed_btn {
+      @extend .gradient_btn_main;
+      background: #fff;
+      border-radius: 30px;
+      margin: 90px 0 30px;
+      padding: 12px 24px;
+      color: $dark;
+      border: 2px solid #fff;
+      &:after {
+        border-radius: 20px;
+        background: rgba(7, 8, 45, 0.5);
+      }
+      &:hover {
+        color: #fff;
+        background: transparent;
+      }
+    }
+  }
+}
+
+// Pakege_Pricing_Area 3
+.packege_pricing_area_3 {
+  @extend .section_padding;
+  .select_month_wrapper {
+    margin: 0px auto;
+    width: 75%;
+    margin-bottom: 60px;
+    #chose_plan {
+      border-radius: 0px;
+    }
+    .split {
+      border-radius: 0;
+    }
+    .option_list.dropon {
+      border-radius: 0px;
+      z-index: 9;
+    }
+    .option_list li {
+      color: $brand_3 !important;
+      &:hover {
+        background: $brand_3 !important;
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+.packege_pricing_area_3 {
+  .tab_wrapper {
+    height: 585px;
+  }
+  .single_pakege_3 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0px 65px;
+    overflow: hidden;
+    top: 0;
+    background-position: center bottom;
+    @include transition(all, 0.3s, ease-in-out);
+    @include boxshadow(0px, 3px, 12px, 0px, rgba(12, 186, 252, 0.3), false);
+    &:before,
+    &:after {
+      content: "";
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 155px;
+    }
+    &:after {
+      z-index: -1;
+      background: rgba(30, 56, 255, 1);
+      bottom: -25px;
+      transform: skewy(5deg);
+    }
+    &:before {
+      background: rgba(30, 56, 255, 0.41);
+      z-index: -2;
+      bottom: -30px;
+      transform: skewY(-7deg);
+    }
+    &:hover {
+      @include boxshadow(0px, 10px, 20px, 0px, rgba(0, 3, 111, 0.3), false);
+      top: -10px;
+    }
+    .sticker {
+      font-size: 16px;
+      color: #fff;
+      text-transform: uppercase;
+      background: $brand_3;
+      @include firasans(700);
+      top: 0;
+      width: 150px;
+      padding: 20px 10px 100px;
+      border-radius: 0 0 100px 100px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+    .pakege_service_list {
+      text-align: center;
+      li {
+        margin-bottom: 15px;
+        padding: 5px 0;
+        color: $brand_2;
+      }
+      li:nth-child(2n + 1) {
+        background: -webkit-linear-gradient(
+          left,
+          rgba(18, 23, 201, 0) 0%,
+          rgba(19, 174, 255, 0.15) 47%,
+          rgba(19, 172, 255, 0.14902) 48%,
+          rgba(24, 45, 238, 0) 100%
+        );
+        background: -o-linear-gradient(
+          left,
+          rgba(18, 23, 201, 0) 0%,
+          rgba(19, 174, 255, 0.15) 47%,
+          rgba(19, 172, 255, 0.14902) 48%,
+          rgba(24, 45, 238, 0) 100%
+        );
+        background: linear-gradient(
+          to right,
+          rgba(18, 23, 201, 0) 0%,
+          rgba(19, 174, 255, 0.15) 47%,
+          rgba(19, 172, 255, 0.14902) 48%,
+          rgba(24, 45, 238, 0) 100%
+        );
+      }
+    }
+    h2 {
+      position: relative;
+      padding: 50px 0 65px;
+      margin: 0px;
+      z-index: 0;
+      font-size: 48px;
+      @include firasans(700);
+      text-align: center;
+      color: #fff;
+    }
+    .boxed_btn {
+      background: #fff;
+      font-size: 16px;
+      @include firasans(500);
+      @include transition(all, 0.3s, ease-in-out);
+      padding: 15px 30px;
+      margin: 90px auto 30px;
+      display: inline-block;
+      color: $dark;
+      &:hover {
+        color: #fff;
+        background: $brand_3_dark;
+      }
+    }
+  }
+}
+
+// Pakege_Pricing_Area 4
+.packege_pricing_area_4 {
+  @extend .section_padding;
+  background: $light_dark;
+  .wrapper {
+    margin: 0px auto 100px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid $brand_4;
+    padding: 5px;
+    border-radius: 60px;
+    overflow: hidden;
+  }
+  .toggle_radio {
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    padding: 0 !important;
+    position: relative;
+  }
+  .toggle_radio > * {
+    float: left;
+  }
+  .toggle_radio input[type="radio"] {
+    display: none;
+  }
+  .toggle_radio label {
+    font-size: 24px;
+    color: $dark;
+    position: relative;
+    z-index: 0;
+    display: block;
+    @include firasans(500);
+    padding: 20px 55px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+    text-align: center;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+  .toggle_option_slider {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: auto;
+    @include gradient_bg_3(right);
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+  #first_toggle:checked + label {
+    color: #fff;
+  }
+  #first_toggle:checked ~ .toggle_option_slider {
+    left: 0px;
+    right: auto;
+  }
+  #second_toggle:checked + label {
+    color: #fff;
+  }
+  #second_toggle:checked ~ .toggle_option_slider {
+    left: 50%;
+    right: auto;
+  }
+}
+
+.item_list.single_pakege_4 {
+  box-shadow: none;
+  &:hover {
+    box-shadow: none;
+  }
+  .pricing_top {
+    background: transparent;
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      height: 12px;
+      background: $dark;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  ul li {
+    @include firasans(500);
+    font-size: 16px;
+    background: $brand_2;
+    color: #fff;
+  }
+}
+
+.single_pakege_4 {
+  text-align: center;
+  box-shadow: 0px 5px 10px 0px rgba(12, 186, 252, 0.1);
+  position: relative;
+  z-index: 1;
+  top: 0;
+  border-radius: 25px;
+  &:hover {
+    @include boxshadow(0px, 15px, 10px, 0px, rgba(12, 186, 252, 0.3), false);
+  }
+  @include transition(all, 0.3s, ease-in-out);
+  .pricing_top {
+    position: relative;
+    z-index: 1;
+    height: 190px;
+    border-radius: 24px 24px 0 0;
+    overflow: hidden;
+    background: $brand;
+    .plan_titel {
+      font-size: 22px;
+      color: #fff;
+      padding: 20px 0;
+      background: rgba(0, 0, 0, 0.1);
+      @include firasans(500);
+      @include transition(all, 0.3s, ease-in-out);
+    }
+    .price {
+      font-size: 48px;
+      @include firasans(700);
+      color: #fff;
+      margin-top: 25px;
+      span {
+        font-size: 16px;
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+  }
+  ul {
+    position: relative;
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: calc(100% + 30px);
+      content: "";
+      background: #fff;
+      height: 100%;
+    }
+    li {
+      background: #fff;
+      font-size: 16px;
+      color: $text;
+      position: relative;
+      z-index: 1;
+      padding: 14px 0;
+      i {
+        font-size: 14px;
+        font-weight: 900;
+        color: $green;
+        &.unchecked {
+          opacity: 0.5;
+        }
+      }
+      &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        content: "";
+        background: lighten($brand, 40%);
+        height: 1px;
+        z-index: -1;
+      }
+    }
+  }
+  .pricing_footer {
+    background: #fff;
+    border-radius: 0 0 24px 24px;
+    .boxed_btn {
+      @extend .gradient_btn_main;
+      padding: 13px 35px;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 50px;
+      margin-top: 35px;
+      margin-bottom: 25px;
+      @include firasans(400);
+      @include transition(all, 0.3s, ease-in-out);
+      display: inline-block;
+      @include gradient_bg_3(top);
+      border: 2px solid #fff;
+      &:after {
+        border-radius: 50px;
+      }
+      &:hover {
+        color: $dark;
+        border: 2px solid #363bff;
+      }
+    }
+  }
+}
+
+.packege_pricing_area_4 .single_pakege_4 .pricing_footer .boxed_btn {
+  @include gradient_bg_3(top);
+  &:hover {
+    background: #fff;
+  }
+}
+
+.single_pakege_4.prof {
+  .pricing_top {
+    background: $green;
+  }
+  ul {
+    &:after {
+      width: calc(100% + 30px);
+    }
+  }
+}
+
+.single_pakege_4.advance {
+  .pricing_top {
+    background: $yellow;
+  }
+  ul {
+    &:after {
+      width: 100%;
+    }
+    li:after {
+      width: 100%;
+    }
+  }
+}
+
+// Pakege_Pricing_Area 5
+.packege_pricing_area_5 {
+  @extend .section_padding;
+  position: relative;
+  z-index: 1;
+  &:after {
+    position: absolute;
+    left: auto;
+    height: 100%;
+    right: -1%;
+    top: calc(50% - 235px);
+    width: 17%;
+    content: "";
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-image: url("../img/pricing/pricing_bg_2.png");
+  }
+  .container.tab_wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    .col-lg-3 {
+      padding: 0;
+    }
+  }
+}
+
+.packege_pricing_area_5 .pricing_tabling {
+  overflow: visible;
+  position: absolute;
+  z-index: 11;
+  height: 190px;
+  width: 90%;
+  &:after {
+    height: 0;
+  }
+  .select_month_wrapper {
+    margin-bottom: 10px;
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background: transparent;
+    #chose_plan {
+      text-shadow: 0 0 0 #fff;
+      background: rgba(0, 0, 0, 0.3);
+      font-size: 12px;
+    }
+    .arrow {
+      top: calc(50% - 6px);
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 9px solid $brand_2;
+    }
+    .split {
+      background: #fff;
+      border-radius: 0;
+    }
+    .option_list li {
+      color: $brand_5;
+      &:hover {
+        background: $brand_5;
+        color: #fff;
+      }
+    }
+  }
+  h3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+  }
+}
+
+.single_pakege_5 {
+  @extend .single_pakege_4;
+  border-radius: 0;
+  box-shadow: none;
+  &:hover {
+    box-shadow: none;
+  }
+  .pricing_top {
+    border-radius: 0;
+    background: #4940e2;
+    &:after {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      content: "";
+      background: rgba(0, 0, 0, 0.1);
+    }
+    .plan_titel {
+      padding: 0;
+      background: none;
+    }
+    .price {
+      margin: 0;
+    }
+  }
+  ul {
+    z-index: 0;
+    li {
+      border: 1px solid rgb(217, 244, 255);
+      border-left: 0px;
+      border-top: 0px;
+      &:after {
+        height: 0;
+      }
+      &:last-child {
+        border-bottom: 0px;
+      }
+    }
+  }
+  .pricing_footer {
+    border-left: 1px solid rgb(217, 244, 255);
+    height: 105px;
+    overflow: hidden;
+    border-radius: 0;
+  }
+}
+
+.item_list.single_pakege_5 {
+  overflow: hidden;
+  .pricing_top {
+    height: 190px;
+    background: #4940e2;
+    &:after {
+      height: 0;
+    }
+  }
+  ul li {
+    background: #fff;
+    color: $brand_2;
+  }
+  .pricing_footer {
+    border-left: 0px;
+  }
+}
+
+.packege_pricing_area_5 .single_pakege_5 .pricing_footer .boxed_btn {
+  color: #fff;
+  @extend .gradient_btn_main;
+  border: 0;
+  @include gradient_bg_4(top);
+  border-radius: 5px;
+  &:after {
+    background: $brand_6;
+    border-radius: 5px;
+  }
+  &:hover {
+    border: 0;
+  }
+}
+
+.single_pakege_5.advance {
+  .pricing_top {
+    background: #4940e2;
+    position: relative;
+    z-index: 1;
+    &:after {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      content: "";
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+  ul {
+    position: relative;
+    &:after {
+      width: 100%;
+    }
+    li:after {
+      width: 100%;
+    }
+  }
+}
+
+.single_pakege_5.pro {
+  box-shadow: none;
+  .pricing_top {
+    background: #4940e2;
+    position: relative;
+    z-index: 1;
+    &:after {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      content: "";
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+  ul {
+    position: relative;
+    &:after {
+      width: calc(100% + 30px);
+    }
+    li {
+      border-right: none;
+    }
+  }
+}
+
+// Pakege_Pricing_Area 6
+.packege_pricing_area_6 {
+  @extend .packege_pricing_area_5;
+  &:after {
+    height: 0;
+  }
+}
+
+.packege_pricing_area_6 {
+  @extend .packege_pricing_area_5;
+}
+
+.single_pakege_6 {
+  @extend .single_pakege_5;
+}
+
+.item_list.single_pakege_6 {
+  @extend .item_list.single_pakege_5;
+}
+
+.packege_pricing_area_6 .single_pakege_6 .pricing_footer .boxed_btn {
+  color: #fff;
+  @extend .gradient_btn_main;
+  border: 0;
+  @include gradient_bg_4(top);
+  &:after {
+    background: $brand_6;
+  }
+  &:hover {
+    border: 0;
+  }
+}
+
+.single_pakege_6.advance {
+  @extend .single_pakege_5.advance;
+}
+
+.single_pakege_6.pro {
+  @extend .single_pakege_5.pro;
+}
+
+// Pakege_Pricing_Area 7
+.packege_pricing_area_7 {
+  @extend .packege_pricing_area_5;
+  background: $light_blue;
+  &:after {
+    height: 0;
+  }
+}
+
+.packege_pricing_area_7 {
+  @extend .packege_pricing_area_5;
+}
+
+.single_pakege_7 {
+  @extend .single_pakege_5;
+  .pricing_top {
+    background: $brand_6;
+  }
+}
+
+.item_list.single_pakege_7 {
+  @extend .item_list.single_pakege_5;
+  .pricing_top {
+    background: $brand_6;
+  }
+  ul li {
+    color: $brand_6;
+  }
+}
+
+.packege_pricing_area_7 .single_pakege_7 .pricing_footer .boxed_btn {
+  background: $brand_6;
+  &:after {
+    background: $dark_3;
+  }
+}
+
+.single_pakege_7.advance {
+  @extend .single_pakege_5.advance;
+  .pricing_top {
+    background: $brand_6;
+  }
+}
+
+.single_pakege_7.pro {
+  @extend .single_pakege_5.pro;
+  .pricing_top {
+    background: $brand_6;
+  }
+}
+
+// Pakege_Pricing_Area 8
+.packege_pricing_area_8 {
+  @extend .packege_pricing_area_5;
+  background: #fff;
+  &:after {
+    height: 0;
+  }
+}
+
+.packege_pricing_area_8.dark {
+  background: transparent;
+}
+
+.single_pakege_8 {
+  @extend .single_pakege_5;
+  .pricing_top {
+    background: $brand_6;
+  }
+}
+
+.item_list.single_pakege_8 {
+  @extend .item_list.single_pakege_5;
+  .pricing_top {
+    background: $brand_6;
+  }
+  ul li {
+    color: $brand_6;
+  }
+}
+
+.packege_pricing_area_8 .single_pakege_8 .pricing_footer .boxed_btn {
+  background: $brand_6;
+  &:after {
+    background: $dark_3;
+  }
+}
+
+.single_pakege_8.advance {
+  @extend .single_pakege_5.advance;
+  .pricing_top {
+    background: $brand_6;
+  }
+}
+
+.single_pakege_8.pro {
+  @extend .single_pakege_5.pro;
+  .pricing_top {
+    background: $brand_6;
+  }
+}
+
+// Pakege_Pricing_Area 9
+.packege_pricing_area_9 {
+  @extend .section_padding;
+  position: relative;
+  .single_pakege_9 {
+    text-align: center;
+    background: #fff;
+    border: 2px solid #fff8fa;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    padding: 25px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    @include transition(all, 0.3s, ease-in-out);
+    .sticker {
+      font-size: 24px;
+      color: #000033;
+      margin: 0;
+      padding: 20px 30px 10px;
+      @include firasans(500);
+      @include transition(all, 0.3s, ease-in-out);
+    }
+    .pakege_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin: 30px auto;
+      padding: 40px;
+      background: #fff8fa;
+      width: 160px;
+      @include transition(all, 0.3s, ease-in-out);
+      height: 160px;
+    }
+    h2 {
+      font-size: 48px;
+      @include firasans(700);
+      color: #000033;
+      margin-bottom: 35px;
+      margin-top: 35px;
+    }
+    ul li {
+      text-align: left;
+      font-size: 16px;
+      color: #666666;
+      margin-bottom: 25px;
+      margin-left: 20px;
+      img {
+        margin-right: 10px;
+      }
+    }
+    p {
+      margin-bottom: 30px;
+      color: #666666;
+    }
+    .boxed_btn {
+      @include gradient_bg_8(right);
+      @include transition(all, 0.3s, ease-in-out);
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      height: 0;
+      margin: 0 auto 20px;
+      border-radius: 50px;
+      visibility: hidden;
+      &:hover {
+        border-radius: 50px;
+        @include gradient_bg_8(left);
+      }
+    }
+    &:hover {
+      top: -15px;
+      background: #fff8fa;
+      .boxed_btn {
+        height: 40px;
+        visibility: visible;
+      }
+      .pakege_icon {
+        background: #fff;
+      }
+    }
+  }
+}
+// border-radius: 0% 125% 0% 100% / 0% 85% 100% 0%;
+// Pakege_Pricing_Area 10
+.packege_pricing_area_10 {
+  @extend .modern_gradient_1;
+  position: relative;
+  z-index: 1;
+  .single_pakege_10 {
+    text-align: center;
+    background: rgba(#fff, 1);
+    position: relative;
+    top: 0;
+    z-index: 11;
+    padding: 25px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    @include transition(all, 0.5s, ease-in-out);
+    .sticker {
+      font-size: 24px;
+      color: $dark_4;
+      margin: 0;
+      padding: 20px 30px 10px;
+      @include firasans(500);
+      @include transition(all, 0.3s, ease-in-out);
+    }
+    .pakege_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin: 30px auto;
+      padding: 40px;
+      background: $brand_9;
+      width: 160px;
+      @include transition(all, 0.3s, ease-in-out);
+      height: 160px;
+    }
+    h2 {
+      font-size: 48px;
+      @include firasans(700);
+      color: $dark_4;
+      margin-bottom: 35px;
+      margin-top: 35px;
+      @include transition(all, 0.3s, ease-in-out);
+    }
+    ul li {
+      text-align: left;
+      font-size: 16px;
+      color: $text;
+      margin-bottom: 25px;
+      margin-left: 20px;
+      @include transition(all, 0.3s, ease-in-out);
+      img {
+        margin-right: 10px;
+      }
+    }
+    p {
+      margin-bottom: 30px;
+      color: $text;
+      @include transition(all, 0.3s, ease-in-out);
+    }
+    .boxed_btn {
+      background: $green_2;
+      @include transition(all, 0.3s, ease-in-out);
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      height: 0;
+      margin: 0 auto 20px;
+      border-radius: 50px;
+      visibility: hidden;
+      &:hover {
+        border-radius: 50px;
+        background: $brand_9;
+        color: $dark_4;
+      }
+    }
+    &:hover {
+      top: -15px;
+      background: rgba($dark_4, 1);
+      .boxed_btn {
+        height: 40px;
+        visibility: visible;
+      }
+      h2,
+      ul li,
+      p {
+        color: #fff;
+      }
+      .pakege_icon {
+        background: rgba(#fff, 0.2);
+      }
+    }
+  }
+}
+// Responsive
+@media #{$medium_device} {
+  .single_pakege_3,
+  .single_pakege_2,
+  .single_pakege {
+    p {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media #{$tab_device} {
+  .select_month_wrapper {
+    margin: 0 auto;
+    margin-bottom: 110px;
+    height: 40px;
+    #chose_plan {
+      font-size: 16px;
+      padding: 12px;
+    }
+    .option_list {
+      li {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+    .split {
+      width: 22%;
+    }
+    .arrow {
+      right: 7%;
+    }
+  }
+  .packege_pricing_area {
+    .tab_wrapper {
+      height: 900px;
+    }
+    .single_pakege {
+      margin-bottom: 45px;
+      .pakege_service_list {
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 13px;
+        }
+      }
+      h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .packege_pricing_area_3 {
+    .tab_wrapper {
+      height: 1215px;
+    }
+    .single_pakege_3 {
+      margin-bottom: 45px;
+      .pakege_service_list {
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 13px;
+        }
+      }
+      h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .packege_pricing_area_2 {
+    .tab_wrapper {
+      height: 1120px;
+    }
+    .single_pakege_2 {
+      margin-bottom: 45px;
+      .pakege_service_list {
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+      h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+      .boxed_btn {
+        margin-top: 60px;
+      }
+    }
+  }
+  .packege_pricing_area_4 {
+    .wrapper {
+      margin: 0px auto 60px;
+    }
+    .toggle_radio label {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+    .tab_wrapper {
+      height: 750px;
+    }
+  }
+  .single_pakege_4 {
+    .pricing_top {
+      height: 140px;
+      .plan_titel {
+        font-size: 18px;
+        padding: 12px 0;
+      }
+      .price {
+        font-size: 36px;
+        margin-top: 15px;
+      }
+    }
+    ul {
+      li {
+        font-size: 14px;
+        padding: 3px 0;
+        line-height: 1.5;
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+    .pricing_footer {
+      .boxed_btn {
+        padding: 8px 22px;
+        font-size: 14px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+      }
+    }
+  }
+  .packege_pricing_area_5 .pricing_tabling {
+    overflow: visible;
+    position: relative;
+    background: rebeccapurple;
+    border-radius: 25px;
+    height: 120px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .single_pakege_5 .pricing_top .price {
+    margin: 0;
+  }
+  .packege_pricing_area_9 {
+    .single_pakege_9 {
+      margin-bottom: 45px;
+    }
+  }
+  .packege_pricing_area_10 {
+    .single_pakege_10 {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+@media #{$small_mobile} {
+  .select_month_wrapper {
+    margin: 0 auto;
+    margin-bottom: 110px;
+    height: 40px;
+    width: 60%;
+    #chose_plan {
+      font-size: 16px;
+      padding: 12px;
+    }
+    .option_list {
+      li {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+    .split {
+      width: 22%;
+    }
+    .arrow {
+      right: 7%;
+    }
+  }
+  .packege_pricing_area {
+    .tab_wrapper {
+      height: 1712px;
+    }
+    .single_pakege {
+      margin-bottom: 50px;
+      .sticker {
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+      .pakege_service_list {
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
+      }
+      .boxed_btn {
+        padding: 10px 20px;
+      }
+    }
+  }
+  .packege_pricing_area_2 {
+    .select_month_wrapper {
+      margin-bottom: 60px;
+      width: 50%;
+      height: 35px;
+      #chose_plan {
+        font-size: 15px;
+        padding: 12px 15px;
+      }
+      .option_list {
+        font-size: 16px;
+        li {
+          font-size: 15px;
+          line-height: 15px;
+        }
+      }
+      .split {
+        width: 20%;
+      }
+      .arrow {
+        top: calc(50% - 6px);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 8px solid #fff;
+        right: 7%;
+      }
+    }
+    .tab_wrapper {
+      height: 1780px;
+    }
+    .single_pakege_2 {
+      margin-bottom: 50px;
+      .sticker {
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+      .pakege_service_list {
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
+      }
+      .boxed_btn {
+        margin-top: 100px;
+      }
+    }
+  }
+  .packege_pricing_area_3 {
+    .tab_wrapper {
+      height: 1745px;
+    }
+    .single_pakege_3 {
+      margin-bottom: 50px;
+      .sticker {
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+      .pakege_service_list {
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
+      }
+      .boxed_btn {
+        margin-top: 85px;
+      }
+    }
+  }
+  .packege_pricing_area_4 {
+    .wrapper {
+      margin: 0px auto 60px;
+    }
+    .toggle_radio label {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+    .tab_wrapper {
+      height: 1600px;
+    }
+  }
+  .single_pakege_4 {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 30px;
+    .pricing_top {
+      height: 120px;
+      .plan_titel {
+        font-size: 16px;
+        padding: 6px 0;
+      }
+      .price {
+        font-size: 36px;
+        margin-top: 15px;
+      }
+    }
+    ul {
+      &:after {
+        display: none;
+        width: 0;
+      }
+      li {
+        font-size: 14px;
+        padding: 3px 0;
+        line-height: 1.5;
+        span {
+          position: relative;
+          z-index: 1;
+          margin-right: 25px;
+          &:after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            left: auto;
+            background: $text;
+            right: -20px;
+            height: 2px;
+            top: calc(50% - 1px);
+            z-index: -1;
+          }
+        }
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+    .pricing_footer {
+      .boxed_btn {
+        padding: 8px 22px;
+        font-size: 14px;
+        margin-bottom: 24px;
+        margin-top: 24px;
+      }
+    }
+  }
+  .packege_pricing_area_5 {
+    .pricing_tabling {
+      overflow: visible;
+      position: relative;
+      background: $brand_6;
+      border-radius: 25px;
+      height: 125px;
+      width: 75%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    .container.tab_wrapper {
+      height: 1620px;
+      box-shadow: none;
+      .col-lg-3 {
+        padding: 0 15px;
+      }
+    }
+  }
+  .single_pakege_5 {
+    border-radius: 25px;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    }
+    .pricing_top {
+      .price {
+        margin: 0;
+      }
+    }
+    .pricing_footer {
+      height: 80px;
+    }
+  }
+  .packege_pricing_area_9 {
+    .single_pakege_9 {
+      margin-bottom: 35px;
+    }
+  }
+  .packege_pricing_area_10 {
+    .single_pakege_10 {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media #{$large_mobile} {
+}
