@@ -55,7 +55,7 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="mega_nav navbar navbar-expand-lg d-flex justify-content-between p-0">
-                        <a class="navbar-brand" href="index.html"><img src="/assets/img/sheleftme3.png" width="130px" alt="Ahope logo_4"></a>
+                        <a class="navbar-brand" href="/"><img src="/assets/img/sheleftme3.png" width="130px" alt="Ahope logo_4"></a>
                         <div class="p-lg-0 nav_wrapper">
                             <ul class="navbar-nav m-auto collapse navbar-collapse" id="mega_menu">
                                 <li class="nav-item">
