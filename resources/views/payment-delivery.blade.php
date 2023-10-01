@@ -45,7 +45,7 @@
                     </p>
                 </div>
                 <div class="single_terms">
-                    <h2>Pengiriman</h2>
+                    <h2>Delivery</h2>
                     <p>Anda akan mendapatkan produk dalam bentuk file digital, jadi tidak membutuhkan proses pengiriman produk secara fisik. Kredensial dikirimkan via WA / Email.</p>
                 </div>
             </div>
