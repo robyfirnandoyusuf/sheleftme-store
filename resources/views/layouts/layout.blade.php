@@ -95,8 +95,7 @@
                     <div class="col-md-4 col-12">
                         <div class="f_widget_1">
                             <h2><a href="#" class="footer_logo"><img src="/assets/img/sheleftme3.png" width="130px" alt="Logo"></a></h2>
-                            <p class="footer_text">We design and develop user-friendly and highly responsive web
-                                templates to help business owners to grow their businesses.</p>
+                            <p class="footer_text">Sheleft.me Store - Solusi Produk Digitalmu</p>
                             <ul class="social_link">
                                 <li><a href="#"><i class="ti-facebook"></i></a></li>
                                 <li><a href="#"><i class="ti-vimeo-alt"></i></a></li>
