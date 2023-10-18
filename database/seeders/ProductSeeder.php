@@ -79,6 +79,27 @@ class ProductSeeder extends Seeder
                 'created_at' => date('Y-m-d H:i:s'),
             ],
             [
+                'title' => 'Disney Hotstar',
+                'image' => 'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//91/MTA-36005462/disney_disney-_hotstar_premium_sharing_full01_b6nmb687.jpg',
+                'category' => 'digital_product',
+                'desc' => 'Disney Hotstar🔰
+
+                🔖 Private
+                1 Bulan : Rp. 20,000
+                2 Bulan : Rp. 38,000
+                
+                Note :
+                - Akun dari seller
+                - Sistem Login OTP
+                - Full Garansi
+                - Tidak Boleh Pindah Device
+                - Limited Stok
+                - Tanyakan Stok sebelum Order',
+                'is_available' => 1,
+                // 'price' => '',
+                'created_at' => date('Y-m-d H:i:s'),
+            ],
+            [
                 'title' => 'Canva PRO',
                 'image' => 'https://down-id.img.susercontent.com/file/67126cb461e0e387c435e2eae88e6a48',
                 'category' => 'digital_product',
@@ -154,6 +175,7 @@ class ProductSeeder extends Seeder
                 // 'price' => '',
                 'created_at' => date('Y-m-d H:i:s'),
             ],
+            
             
             // Hosting
             [
