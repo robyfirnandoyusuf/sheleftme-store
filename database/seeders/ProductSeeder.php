@@ -26,12 +26,12 @@ class ProductSeeder extends Seeder
                 🔖Sharing
                 1 Bulan 1 Profil 1 User : Rp. 34,000
                 (Req Profil/Pin + 2,000)
-                
+
                 1 Bulan 1 Profil 2 User : Rp. 24,000
-                
+
                 🔖Private
                 1 Bulan 5 Profil : Rp. 125,000
-                
+
                 Note :
                 - Full Garansi
                 - 1 Bulan (27-31 Day)
@@ -49,7 +49,7 @@ class ProductSeeder extends Seeder
                 🔖 Individual
                 4 Bulan (No Garansi) : Rp. 15,000
                 4 Bulan (Gar 1x Replace) : Rp. 20,000
-                
+
                 Note:
                 - Email dari Seller
                 - Acc Seller Garansi sesuai List
@@ -69,7 +69,7 @@ class ProductSeeder extends Seeder
                 🔖 Private
                 6 Bulan : Rp. 14,000
                 12 Bulan : Rp. 18,000
-                
+
                 Note :
                 - Akun dari seller
                 - Garansi 6 Bulan
@@ -106,34 +106,34 @@ class ProductSeeder extends Seeder
                 'desc' => '[ CANVA PRO ]
 
                 [ VIA INVITE 1 BULAN ]
-                
+
                 » Email buyer : ( Rp. 3,000 )
                 » Brand Designer
-                
+
                 [ VIA INVITE 45 HARI ]
-                
+
                 » Email buyer : ( Rp. 5,000 )
                 » Brand Designer
                 ≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
-                
+
                 [ CANVA OWNER 1 BULAN ]
-                
+
                 » Email seller : ( Rp. 6,000 )
                 » Owner
                 » Bisa invite member
-                
+
                 [ CANVA OWNER 45 HARI ]
-                
+
                 » Email seller : ( Rp. 8,000 )
                 » Owner
                 » Bisa invite member
                 ≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
-                
+
                 Note : [ Canva Invite ]
                 » Via invite email buyer
                 » Brand Designer
                 » Design ga tercampur sama yg lain.
-                
+
                 Note : [ Canva Owner ]
                 » Email dari seller
                 » Boleh ganti password
@@ -154,7 +154,7 @@ class ProductSeeder extends Seeder
                 » ChatGPT 3.5
                 » ChatGPT 4
                 » ChatGPT Plus
-                
+
                 Fitur :
                 » Bisa Untuk Developer Web & Aplikasi
                 » Build an application:
@@ -165,18 +165,63 @@ class ProductSeeder extends Seeder
                 » Image generation (Beta)
                 » Fine-tuning
                 » Build a ChatGPT plugin (Alpha)
-                
+
                 Note :
                 » Login langsung dari chat GPT
                 » Akun sharing ( 1 Akun lebih dari 4 user )
-                
+
                 Status GARANSI',
                 'is_available' => 1,
                 // 'price' => '',
                 'created_at' => date('Y-m-d H:i:s'),
             ],
-            
-            
+            [
+                'title' => 'Chat GPT Plus (Private)',
+                'image' => 'https://www.geeky-gadgets.com/wp-content/uploads/2023/06/What-is-ChatGPT-plus.webp',
+                'category' => 'digital_product',
+                'desc' => '[ CHAT GPT+ Private ]
+
+                » 1 Bulan
+                » Akun dari seller ( 130k )
+                » ChatGPT 3.5
+                » ChatGPT 4
+                » ChatGPT Plus
+
+                Fitur :
+                » Bisa Untuk Developer Web & Aplikasi
+                » Build an application:
+                » Chat (Beta)
+                » Text completion
+                » Embeddings
+                » Speech to text (Beta)
+                » Image generation (Beta)
+                » Fine-tuning
+                » Build a ChatGPT plugin (Alpha)
+
+                Note :
+                » Login langsung dari chat GPT
+                » Akun private ( 1 Akun 1 user)
+
+                Status GARANSI',
+                'is_available' => 1,
+                // 'price' => '',
+                'created_at' => date('Y-m-d H:i:s'),
+            ],
+
+            [
+                'title' => 'Domain TLD',
+                'category' => 'domain',
+                'image' => 'https://cdn4.iconfinder.com/data/icons/seo-internet/512/17-512.png',
+                'desc' => '
+                PRICE: Rp. 50,000 / Yearly
+
+                » Fullcontrol via Cloudflare
+                » Auto SSL
+                ',
+                'is_available' => 1,
+                // 'price' => '',
+                'created_at' => date('Y-m-d H:i:s'),
+            ],
             // Hosting
             [
                 'title' => 'Paket Hosting Galau',
@@ -236,7 +281,7 @@ class ProductSeeder extends Seeder
                 'desc' => '
                 [ VPS PAKET Bertahan ]
                 *VPS KVM NVMe Singapore
-                
+
                 PRICE: Rp. 80,000 / Monthly
                 » 1 Core E5 2680 v4
                 » 1 GB Ram DDR4
@@ -260,7 +305,7 @@ class ProductSeeder extends Seeder
                 'desc' => '
                 [ VPS PAKET Move On ]
                 *VPS KVM NVMe Singapore
-                
+
                 PRICE: Rp. 200,000 / Monthly
                 » 2 Core E5 2680 v4
                 » 2 GB Ram DDR4
@@ -283,7 +328,7 @@ class ProductSeeder extends Seeder
                 'desc' => '
                 [ VPS PAKET Cari Baru ]
                 *VPS KVM NVMe Singapore
-                
+
                 PRICE: Rp. 350,000 / Monthly
                 » 4 Core E5 2680 v4
                 » 4 GB Ram DDR4
