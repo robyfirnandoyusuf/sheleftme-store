@@ -222,6 +222,38 @@ class ProductSeeder extends Seeder
                 // 'price' => '',
                 'created_at' => date('Y-m-d H:i:s'),
             ],
+            [
+                'title' => 'PERPANJANG MASA AKTIF KARTU',
+                'image' => 'https://www.telkomsel.com/sites/default/files/product_banner_image/jaga-nomor-LANDING.png',
+                'category' => 'digital_product',
+                'desc' => 'PERPANJANG MASA AKTIF KARTU
+                🔖Three
+                4 Bulan : Rp. 15,000
+                8 Bulan : Rp. 18,000
+                1 Tahun : Rp. 21,000
+                🔖Telkomsel
+                30 Hari : Rp. 21,000
+                3 Bulan : Rp. 40,000
+                6 Bulan : Rp. 65,000
+                1 Tahun : Rp. 115,000
+                🔖XL
+                30 Hari : Rp. 21,000
+                🔖Axis
+                30 Hari : Rp. 17,000
+                4 Bulan : Rp. 23,500
+                8 Bulan : Rp. 35,000
+                1 Tahun : Rp. 41,000
+                🔖Indosat
+                30 Hari : Rp. 21,000
+                *Note :
+                - Cuma butuh Nomor
+                - Proses 10-30 menit (tergantung antrian)
+                ',
+                'is_available' => 1,
+                // 'price' => '',
+                'created_at' => date('Y-m-d H:i:s'),
+            ],
+
             // Hosting
             [
                 'title' => 'Paket Hosting Galau',
