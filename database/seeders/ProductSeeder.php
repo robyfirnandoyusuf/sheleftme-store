@@ -100,6 +100,27 @@ class ProductSeeder extends Seeder
                 'created_at' => date('Y-m-d H:i:s'),
             ],
             [
+                'title' => 'VIDIO PLATINUM PRIVATE',
+                'image' => 'https://about.vidio.com/wp-content/uploads/2019/09/logo-premier-png-1024x1024.png',
+                'category' => 'digital_product',
+                'desc' => '🔖 1 TAHUN NOGAR
+
+                1 Akun : Rp.10,000
+                10 Akun : Rp.8,000
+                50 Akun : Rp.7,500
+                🔖 1 TAHUN GARANSI
+                
+                1 Akun : Rp.15,000
+                10 Akun : Rp.12,000
+                🔖 3 BULAN GARANSI
+                
+                1 Akun : Rp.12,000
+                10 Akun : Rp.10,000',
+                'is_available' => 1,
+                // 'price' => '',
+                'created_at' => date('Y-m-d H:i:s'),
+            ],
+            [
                 'title' => 'Canva PRO',
                 'image' => 'https://down-id.img.susercontent.com/file/67126cb461e0e387c435e2eae88e6a48',
                 'category' => 'digital_product',
