@@ -16425,9 +16425,9 @@ body {
 
 /*# sourceMappingURL=style.css.map */
 
-.pre-style {
+.text-pre-wrap p {
   white-space: pre-wrap; /* Allows the text to wrap */
-  word-break: break-word; /* To prevent overflow of long words */
-  overflow-x: auto; /* Adds horizontal scroll if needed */
-  max-width: 100%; /* Ensures it doesn't overflow its container */
+  word-wrap: break-word; /* Breaks long words to prevent horizontal scrolling */
+  overflow-wrap: break-word; /* Ensures that long words can break and wrap to the next line */
+  max-width: 100%; /* Prevents the paragraph from exceeding the width of its container */
 }
