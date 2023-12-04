@@ -252,8 +252,7 @@ class ProductSeeder extends Seeder
                 » Emoji Kustom
                 » Pengaturan Privasi Pesan Suara
 
-                Note :
-                » Kirimkan kredensial ke Admin',
+                ',
                 'is_available' => 1,
                 // 'price' => '',
                 'created_at' => date('Y-m-d H:i:s'),
