@@ -228,6 +228,36 @@ class ProductSeeder extends Seeder
                 // 'price' => '',
                 'created_at' => date('Y-m-d H:i:s'),
             ],
+            [
+                'title' => 'Telegram (Premium)',
+                'image' => 'https://cdn.eraspace.com/pub/media/wysiwyg/artikel/Tahun_2022/Juni/telegrampremium-3.jpg',
+                'category' => 'digital_product',
+                'desc' => '[ Telegram Premium ]
+
+                » 1 Tahun
+                » Akun dari seller ( 150k )
+
+                Fitur :
+                » Limit Dua Kali Lipat
+                » Unggahan Berkas 4 GB
+                » Pengunduhan Lebih Cepat
+                » Konversi Audio menjadi Teks
+                » Stiker Premium
+                » Reaksi Unik
+                » Pengelolaan Obrolan Lanjutan
+                » Foto Profil Beranimasi
+                » Emblem Profil
+                » Ikon Aplikasi Premium
+                » Tanpa Iklan
+                » Emoji Kustom
+                » Pengaturan Privasi Pesan Suara
+
+                Note :
+                » Kirimkan kredensial ke Admin',
+                'is_available' => 1,
+                // 'price' => '',
+                'created_at' => date('Y-m-d H:i:s'),
+            ],
 
             [
                 'title' => 'Domain TLD',
