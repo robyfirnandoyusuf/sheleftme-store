@@ -257,6 +257,48 @@ class ProductSeeder extends Seeder
                 // 'price' => '',
                 'created_at' => date('Y-m-d H:i:s'),
             ],
+            [
+                'title' => 'Tinder (Premium)',
+                'image' => 'https://download.logo.wine/logo/Tinder_(app)/Tinder_(app)-Logo.wine.png',
+                'category' => 'digital_product',
+                'desc' => '[ Tinder Premium ]
+
+                PAKET:
+                Tinder+
+                » Rp. 50.000
+
+                [FEATURES]
+                » Unlimited Likes
+                » Unlimited Rewinds
+                » Passport™ To Any Location
+                » Hide Advertisements
+
+
+                Tinder GOLD
+                » Rp. 100.000
+
+                [FEATURES]
+                » See Who Likes You
+                » New Top Picks every day
+                » 5 Super Likes a week
+                » 1 Free Boost a month
+                » Free monthly Boost only available for 1 month or longer subscriptions.
+                » And everything you love from Tinder Plus®!
+
+                Tinder Platinum
+                » Rp. 125.000
+
+                [FEATURES]
+                » Message before Matching
+                » Prioritized Likes
+                » See the Likes you’ve sent in the last 7 days
+                » And everything you love from Tinder Gold™!
+
+                ',
+                'is_available' => 1,
+                // 'price' => '',
+                'created_at' => date('Y-m-d H:i:s'),
+            ],
 
             [
                 'title' => 'Domain TLD',
